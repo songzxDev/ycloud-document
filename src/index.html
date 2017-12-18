@@ -84,22 +84,19 @@
     </style>
 </head>
 <body>
-<ul class="side-menu">
+<ul id="side-menu" class="side-menu">
   <li>
     <a href="/yuncai/mobile/login.html?r=/">
       <i class="fa fa-home"></i>
       <span>登录链接</span></a>
   </li>
+  <!-- ko foreach: {data: componentsList, as: 'row'} -->
   <li>
-    <a href="#button">
-      <i class="fa fa-home"></i>
-      <span>按钮</span></a>
+    <a data-bind="attr: {href: '#' + row.name}">
+      <i class="fa fa-home" data-bind="css: row.icon"></i>
+      <span data-bind="text: row.showName"></span></a>
   </li>
-  <li>
-    <a href="#grid">
-      <i class="fa fa-home"></i>
-      <span>表格</span></a>
-  </li>
+  <!-- /ko -->
 </ul>
 
 <div id="bodycontent">

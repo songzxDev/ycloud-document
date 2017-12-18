@@ -1,7 +1,10 @@
 import ko from 'knockout'
 import $ from 'jquery'
-const button = resolve => require(['./views/button'], resolve)
-const grid = resolve => require(['./views/grid'], resolve)
+import componentsList from './model/views'
+var routesList = {}
+componentsList.forEach((item) => {
+  routesList['/' + item.name] = resolve => require(['./views/' + item.name], resolve)
+})
 
 function initPage (page) {
   page(function (item) {
@@ -10,10 +13,7 @@ function initPage (page) {
     item.default.init()
   })
 }
-var routesList = {
-  '/button': button,
-  '/grid': grid
-}
+
 var routes = {}
 Object.keys(routesList).forEach(item => {
   routes[item] = function () {
