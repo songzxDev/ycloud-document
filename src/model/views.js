@@ -2,12 +2,12 @@
 export default [
   {
     name: 'button',
-    icon: '',
+    icon: 'fa-youtube-play',
     showName: 'Button 按钮'
   },
   {
     name: 'test',
-    icon: '',
+    icon: 'fa-hand-o-up',
     showName: '测试例子'
   }
 ]

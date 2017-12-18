@@ -93,7 +93,7 @@
   <!-- ko foreach: {data: componentsList, as: 'row'} -->
   <li>
     <a data-bind="attr: {href: '#' + row.name}">
-      <i class="fa fa-home"></i>
+      <i class="fa fa-home" data-bind="css: row.icon"></i>
       <span data-bind="text: row.showName"></span></a>
   </li>
   <!-- /ko -->
