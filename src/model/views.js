@@ -6,6 +6,11 @@ export default [
     showName: 'Button 按钮'
   },
   {
+    name: 'grid',
+    icon: 'fa-table',
+    showName: 'Grid 表格'
+  },
+  {
     name: 'test',
     icon: 'fa-hand-o-up',
     showName: '测试例子'
