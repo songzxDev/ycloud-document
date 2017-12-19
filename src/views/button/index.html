@@ -5,7 +5,8 @@
       <y-button params="type: 'primary'">Primary</y-button>
       <y-button params="type: 'ghost'">Ghost</y-button>
       <y-button params="type: 'dashed'">Dashed</y-button>
-      <y-button params="type: 'text'">Text</y-button><br>
+      <y-button params="type: 'text'">Text</y-button>
+      <hr class="hr-fix">
       <y-button params="type: 'info'">Info</y-button>
       <y-button params="type: 'success'">Success</y-button>
       <y-button params="type: 'warning'">Warning</y-button>
@@ -17,6 +18,51 @@
     <div class="code-bottom">
       按钮类型有：默认按钮、主按钮、幽灵按钮、虚线按钮、文字按钮以及四种颜色按钮。
       通过设置<code>type</code>为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。
+    </div>
+  </demo>
+
+  <demo params="code:code.size">
+    <div class="code-top">
+      <y-button params="type: 'primary', size: 'large'">Large</y-button>
+      <y-button params="type: 'primary'">Default</y-button>
+      <y-button params="type: 'primary', size: 'small'">Small</y-button>
+      <hr class="hr-fix">
+      <y-button params="type: 'primary', shape: 'circle', size: 'large'">Large</y-button>
+      <y-button params="type: 'primary', shape: 'circle'">Default</y-button>
+      <y-button params="type: 'primary', shape: 'circle', size: 'small'">Small</y-button>
+    </div>
+    <div class="code-split">
+      <span>按钮尺寸</span>
+    </div>
+    <div class="code-bottom">
+      按钮有三种尺寸：大、默认（中）、小
+      通过设置<code>size</code>为<code>large</code>和<code>small</code>将按钮设置为大和小尺寸，不设置为默认（中）尺寸。
+    </div>
+  </demo>
+
+  <demo params="code:code.disabled">
+    <div class="code-top">
+      <y-button params="type: 'primary'">Default</y-button>
+      <y-button params="type: 'primary', disabled: true">Default(Disabled)</y-button>
+    </div>
+    <div class="code-split">
+      <span>不可用状态</span>
+    </div>
+    <div class="code-bottom">
+      通过添加<code>disabled</code>属性可将按钮设置为不可用状态。
+    </div>
+  </demo>
+
+  <demo params="code:code.loading">
+    <div class="code-top">
+      <y-button params="type: 'primary'">Default</y-button>
+      <y-button params="type: 'primary', click: $parent.load, loading: $parent.loading">Default</y-button>
+    </div>
+    <div class="code-split">
+      <span>加载中状态</span>
+    </div>
+    <div class="code-bottom">
+      通过添加<code>loading</code>属性可以让按钮处于加载中状态，后两个按钮在点击时进入加载状态。
     </div>
   </demo>
 </div>
