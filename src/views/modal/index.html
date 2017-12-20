@@ -1,0 +1,35 @@
+<div>
+    <demo params="code:code[0]">
+      <div class="code-top">
+        <y-button params="type:'ghost', click:$parent.showModal">显示弹框</y-button>
+        <y-modal params="visible: $parent.modalVisible, width:'700px', title:'普通的Modal对话框'">
+          <p>我说</p>
+          <p>短发短发</p>
+          <p>姑娘</p>
+        </y-modal>
+      </div>
+      <div class="code-split">
+        <span>基础用法</span>
+      </div>
+      <div class="code-bottom">
+        最简单的使用方法，通过控制属性visible来显示 / 隐藏对话框。<br>
+      </div>
+    </demo>
+
+    <demo params="code:code[0]">
+      <div class="code-top">
+        <y-button params="type:'ghost', click:function(){$parent.showModal($parent[1])}">显示弹框</y-button>
+        <!-- <y-modal params="visible: $parent.modalVisible, width:'700px',title:'普通的Modal对话框'">
+          <y-switch params="checked: onModalOkValidate, size: 'large'">
+            <span data-bind = "text: onModalOkValidate()? '开启': '关闭'">开</span>
+          </y-switch>
+        </y-modal> -->
+      </div>
+      <div class="code-split">
+        <span>基础用法</span>
+      </div>
+      <div class="code-bottom">
+        最简单的使用方法，通过控制属性visible来显示 / 隐藏对话框。<br>
+      </div>
+    </demo>
+  </div>

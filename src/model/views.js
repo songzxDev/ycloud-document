@@ -16,6 +16,11 @@ export default [
     showName: 'Grid<br>表格'
   },
   {
+    name: 'modal',
+    icon: 'fa-comment-o',
+    showName: 'Modal<br>对话框'
+  },
+  {
     name: 'test',
     icon: 'fa-hand-o-up',
     showName: '测试例子'
