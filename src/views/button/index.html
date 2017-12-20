@@ -21,15 +21,28 @@
     </div>
   </demo>
 
+  <demo params="code:code.shape">
+    <div class="code-top">
+      <y-button params="type: 'warning', shape: 'circle'">0.0</y-button>
+      <y-button params="type: 'warning'">0.0</y-button>
+    </div>
+    <div class="code-split">
+      <span>按钮形状</span>
+    </div>
+    <div class="code-bottom">
+      通过设置<code>shape</code>属性为<code>circle</code>，可将按钮置为圆的形状。
+    </div>
+  </demo>
+
   <demo params="code:code.size">
     <div class="code-top">
-      <y-button params="type: 'primary', size: 'large'">Large</y-button>
-      <y-button params="type: 'primary'">Default</y-button>
-      <y-button params="type: 'primary', size: 'small'">Small</y-button>
+      <y-button params="type: 'ghost', size: 'large'">Large</y-button>
+      <y-button params="type: 'ghost'">Default</y-button>
+      <y-button params="type: 'ghost', size: 'small'">Small</y-button>
       <hr class="hr-fix">
-      <y-button params="type: 'primary', shape: 'circle', size: 'large'">Large</y-button>
-      <y-button params="type: 'primary', shape: 'circle'">Default</y-button>
-      <y-button params="type: 'primary', shape: 'circle', size: 'small'">Small</y-button>
+      <y-button params="type: 'ghost', shape: 'circle', size: 'large'">Large</y-button>
+      <y-button params="type: 'ghost', shape: 'circle'">Default</y-button>
+      <y-button params="type: 'ghost', shape: 'circle', size: 'small'">Small</y-button>
     </div>
     <div class="code-split">
       <span>按钮尺寸</span>
@@ -55,14 +68,43 @@
 
   <demo params="code:code.loading">
     <div class="code-top">
-      <y-button params="type: 'primary'">Default</y-button>
-      <y-button params="type: 'primary', click: $parent.load, loading: $parent.loading">Default</y-button>
+      <y-button params="type: 'success'">Success</y-button>
+      <y-button params="type: 'success', click: $parent.load, loading: $parent.loading">Loading</y-button>
     </div>
     <div class="code-split">
       <span>加载中状态</span>
     </div>
     <div class="code-bottom">
       通过添加<code>loading</code>属性可以让按钮处于加载中状态，后两个按钮在点击时进入加载状态。
+    </div>
+  </demo>
+
+  <demo params="code:code.wait">
+    <div class="code-top">
+      <y-button params="type: 'error', click: $parent.wait">Default</y-button>
+      <y-button params="type: 'error', click: $parent.wait, wait: 3000">wait</y-button>
+    </div>
+    <div class="code-split">
+      <span>设置等待时间</span>
+    </div>
+    <div class="code-bottom">
+      通过添加<code>wait</code>属性为<code>n毫秒数</code>，可以让按钮处于不可点击状态，防止快速点击多次触发事件。
+    </div>
+  </demo>
+
+  <demo params="code:code.btnType_a">
+    <div class="code-top">
+      <y-button params="type: 'info', btnType: 'a', url: 'www.baidu.com'">相对路径本页跳转</y-button>
+      <y-button params="type: 'info', btnType: 'a', url: 'www.baidu.com', rootPath: true">绝对路径本页跳转</y-button>
+      <hr class="hr-fix">
+      <y-button params="type: 'info', btnType: 'a', url: 'www.baidu.com', target: '_blank'">相对路径打开新开页</y-button>
+      <y-button params="type: 'info', btnType: 'a', url: 'www.baidu.com', rootPath: true, target: '_blank'">绝对路径打开新开页</y-button>
+    </div>
+    <div class="code-split">
+      <span>btnType设置为a时</span>
+    </div>
+    <div class="code-bottom">
+      通过设置<code>btnType</code>为<code>a</code>，添加<code>url</code>为<code>目标url</code>，添加<code>rootPath</code>为<code>false/true(默认为false)</code>控制本页跳转或者新页面打开，<code>target</code>与a的target保持一致，规定在何处打开链接文档。
     </div>
   </demo>
 </div>
