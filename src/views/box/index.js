@@ -1,0 +1,59 @@
+import template from './index.html'
+import ko from 'knockout'
+import '@/components'
+function init () {
+  var viewmodel = {
+    code: [
+      `
+      <template>
+        <y-box>
+          <y-boxfilter params="title:'boxfilter'"></y-boxfilter>
+          <y-boxcontent params="title: 'boxcontent'">
+            基本布局
+          </y-boxcontent>
+        </y-box>
+      </template>
+      `,
+      `
+      <template>
+        <y-box>
+          <y-boxfilter params="title:'boxfilter'">
+          </y-boxfilter>
+          <div class="row">
+            <div class="col-md-2">
+              <y-boxcontent params="style:{minHeight:'500px'},title:'左侧导航'"></y-boxcontent>
+            </div>
+            <div class="col-md-10">
+              <y-boxcontent params="title:'右侧内容',style:{marginLeft:'-20px',minHeight:'500px'}"></y-boxcontent>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <y-boxcontent params="title:'左侧内容',style:{marginRight:'-20px',minHeight:'300px'}"></y-boxcontent>
+            </div>
+            <div class="col-md-4">
+              <y-boxcontent params="style:{minHeight:'300px'},title:'右侧导航'"></y-boxcontent>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <y-boxcontent params="title:'左侧',style:{marginRight:'-3%',minHeight:'300px'}"></y-boxcontent>
+            </div>
+            <div class="col-md-4">
+              <y-boxcontent params="style:{minHeight:'300px',marginLeft:'-7px',marginRight:'-7px'},title:'中间'"></y-boxcontent>
+            </div>
+            <div class="col-md-4">
+              <y-boxcontent params="style:{minHeight:'300px',marginLeft:'-3%'},title:'右侧'"></y-boxcontent>
+            </div>
+          </div>
+        </y-box>
+      </template>
+      `
+    ]
+  }
+  ko.applyBindings(viewmodel, document.getElementById('app'))
+}
+export default {
+  template,
+  init
+}

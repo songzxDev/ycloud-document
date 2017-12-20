@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ycloud-admin</title>
+    <title>ycloud-document</title>
     <meta http-equiv="Cache-Control" CONTENT="no-cache">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
@@ -59,6 +59,9 @@
         .side-menu li:hover{
           background: #4f4f4f;
         }
+        .side-menu li.active {
+          background: #4f4f4f;
+        }
         .side-menu li i{
           font-size: 20px;
           color: #bfbfbf;
@@ -105,10 +108,10 @@
       <span>登录链接</span></a>
   </li>
   <!-- ko foreach: {data: componentsList, as: 'row'} -->
-  <li>
+  <li data-bind="css: {'active': $parent.hash().indexOf(row.name) > 0}">
     <a data-bind="attr: {href: '#' + row.name}">
       <i class="fa fa-home" data-bind="css: row.icon"></i>
-      <span data-bind="text: row.showName"></span></a>
+      <span data-bind="html: row.showName"></span></a>
   </li>
   <!-- /ko -->
 </ul>
