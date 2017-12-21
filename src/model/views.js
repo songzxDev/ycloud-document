@@ -28,6 +28,6 @@ export default [
   {
     name: 'tree',
     icon: 'fa-list',
-    showName: '树'
+    showName: 'Tree<br>树'
   }
 ]
