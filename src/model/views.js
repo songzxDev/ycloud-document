@@ -24,5 +24,10 @@ export default [
     name: 'test',
     icon: 'fa-hand-o-up',
     showName: '测试例子'
+  },
+  {
+    name: 'tree',
+    icon: 'fa-list',
+    showName: '树'
   }
 ]

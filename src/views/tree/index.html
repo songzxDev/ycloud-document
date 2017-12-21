@@ -1,0 +1,26 @@
+<div class="y-box">
+  <h1>Tree属性组件</h1>
+  <h2>代码示例</h2>
+  <demo params="code:code">
+    <div class="code-top">
+      <y-tree params="data:$parent.treeData, height:'200px',onSelect: $parent.handleTreeSelect"></y-tree>
+    </div>
+    <div class="code-split">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      最简单的用法，点击可获取选中的值，树节点数据格式:<b>{id:'', name:'', children: []}</b>
+    </div>
+  </demo>
+  <demo params="code:code2">
+    <div class="code-top">
+      <y-tree params="data:$parent.asyncTreeData, height:'200px', loadData:$parent.loadData"></y-tree>
+    </div>
+    <div class="code-split">
+      <span>异步加载</span>
+    </div>
+    <div class="code-bottom">
+      使用<b><em>loadData</em></b>参数，传入获取子节点的函数即可
+    </div>
+  </demo>
+</div>

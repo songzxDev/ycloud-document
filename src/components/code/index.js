@@ -2,7 +2,7 @@ import tpl from './index.html'
 import './index.less'
 import ko from 'knockout'
 import hljs from 'highlightjs'
-import 'highlightjs/styles/atom-one-light.css'
+import 'highlightjs/styles/github.css'
 function Init (params, el) {
   this.$el = el.childNodes[0]
   this.code = params.code
