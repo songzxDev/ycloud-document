@@ -18,12 +18,10 @@
 
     <demo params="code:code[0]">
       <div class="code-top">
-        <y-button params="type:'ghost', click:function(){$parent.showModal($parent[1])}">显示弹框</y-button>
-        <!-- <y-modal params="visible: $parent.modalVisible, width:'700px',title:'普通的Modal对话框'">
-          <y-switch params="checked: onModalOkValidate, size: 'large'">
-            <span data-bind = "text: onModalOkValidate()? '开启': '关闭'">开</span>
-          </y-switch>
-        </y-modal> -->
+        <y-button params="type:'ghost', click:function(){$parent.showModal1($parent[1])}">显示弹框</y-button>
+        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'普通的Modal对话框'">
+          <!-- <y-grid params="modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$root.onRowSelect,isStripe: true,columns:$root.columns,rows: $root.rows,lockhead:true"></y-grid> -->
+        </y-modal>
       </div>
       <div class="code-split">
         <span>基础用法</span>

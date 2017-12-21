@@ -5926,9 +5926,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-ycloud@^1.2.29:
-  version "1.2.29"
-  resolved "http://registry.npm.taobao.org/ycloud/download/ycloud-1.2.29.tgz#08483e4d72e8322b332d3b9fe87e4beac4c86fbf"
+ycloud@^1.2.31:
+  version "1.2.32"
+  resolved "https://registry.npmjs.org/ycloud/-/ycloud-1.2.32.tgz#581c4f00940a6328fbe899e37b6a9324865e38a2"
   dependencies:
     async-validator "^1.8.1"
     fast-uglifyjs-plugin "^0.3.0"
