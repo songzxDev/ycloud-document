@@ -29,5 +29,10 @@ export default [
     name: 'tree',
     icon: 'fa-list',
     showName: 'Tree<br>树'
+  },
+  {
+    name: 'pagination',
+    icon: 'fa-angel-right',
+    showName: 'pagination<br>分页'
   }
 ]
