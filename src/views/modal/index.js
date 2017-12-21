@@ -33,7 +33,10 @@ function init () {
     showModal1: () => {
       viewmodel.modalVisible(true)
     },
-    checked: ko.observable(false)
+    checked: ko.observable(false),
+    onRowSelect: function (row) {
+      debugger
+    }
   }
 
   ko.applyBindings(viewmodel, document.getElementById('app'))
