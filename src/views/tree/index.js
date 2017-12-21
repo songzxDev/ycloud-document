@@ -63,31 +63,36 @@ function init () {
       }
       </script>
     `,
-    loadData: function (params, cb) {
+    loadData: function (params, fn) {
       if (params.name !== '没有子节点') {
-        setTimeout(()=> {
-          cb([{id:Math.random(),name:'含有子节点'}, {id:Math.random(),name:'没有子节点'}])
+        setTimeout(function () {
+          fn([{id: Math.random(), name: '含有子节点'}, {id: Math.random(), name: '没有子节点'}])
         }, 500)
-
       } else {
-        cb(null)
+        fn(null)
       }
     },
     asyncTreeData: ko.observableArray([{id: 1, name: '全部'}]),
     treeData: ko.observable([{
-      id: 1, name: '北京总公司', children: [
+      id: 1,
+      name: '北京总公司',
+      children: [
         {
-          id: 2, name: '上海分公司', children: []
+          id: 2,
+          name: '上海分公司',
+          children: []
         },
         {
-          id: 3, name: '福建分公司', children: [
-          {
-            id: 4, name: '福州分公司', children: []
-          },
-          {
-            id: 5, name: '厦门分公司', children: []
-          }
-        ]
+          id: 3,
+          name: '福建分公司',
+          children: [
+            {
+              id: 4, name: '福州分公司', children: []
+            },
+            {
+              id: 5, name: '厦门分公司', children: []
+            }
+          ]
         }
       ]
     }]),
