@@ -16,18 +16,18 @@
       </div>
     </demo>
 
-    <demo params="code:code[0]">
+    <demo params="code:code[1]">
       <div class="code-top">
-        <y-button params="type:'ghost', click:function(){$parent.showModal1($parent[1])}">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'普通的Modal对话框'">
-          <!-- <y-grid params="modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$root.onRowSelect,isStripe: true,columns:$root.columns,rows: $root.rows,lockhead:true"></y-grid> -->
+        <y-button params="type:'ghost', click:function(){$parent.showModal1($parents)}">显示弹框</y-button>
+        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',errormsg:'请至少选择一条数据！'">
+          <y-grid params="onModalOkValidate: onModalOkValidate, modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$parentContext.$parent.onRowSelect,isStripe: true,columns: $parentContext.$parent.columns,rows: $parentContext.$parent.rows,lockhead:true, selectedRows: $parentContext.$parent.selectedRows"></y-grid>
         </y-modal>
       </div>
       <div class="code-split">
-        <span>基础用法</span>
+        <span>校验对话框</span>
       </div>
       <div class="code-bottom">
-        最简单的使用方法，通过控制属性visible来显示 / 隐藏对话框。<br>
+        将modal的<code>onModalOkValidate</code>传递给下层组件，通过自定义规则阻止模态框的确定事件触发并给出提示。<br>
       </div>
     </demo>
   </div>
