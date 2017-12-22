@@ -34,5 +34,15 @@ export default [
     name: 'pagination',
     icon: 'fa-angel-right',
     showName: 'pagination<br>分页'
+  },
+  {
+    name: 'dropdown',
+    icon: 'fa-sort-desc',
+    showName: 'dropdown<br>下拉菜单'
+  },
+  {
+    name: 'switch',
+    icon: 'fa-eye-slash',
+    showName: 'Switch<br>开关'
   }
 ]

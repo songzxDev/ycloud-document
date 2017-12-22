@@ -155,7 +155,7 @@ function init () {
   }, 300)
 
   function validate () {
-    let grid = ycloud.$refs['modalgrid']
+    let grid = window.ycloud.$refs['modalgrid']
     if (grid.getSelectedRows().length > 0) {
       grid.onModalOkValidate(true)
     } else {

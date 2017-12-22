@@ -1,0 +1,72 @@
+<div>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-switch params="checked: $parent.checked1"></y-switch>
+    </div>
+    <div class="code-split">
+      <span>基本</span>
+    </div>
+    <div class="code-bottom">
+      基本用法，状态切换时会触发事件。
+    </div>
+  </demo>
+</div>
+
+<div>
+  <demo params="code:code[1]">
+    <div class="code-top">
+      <y-switch params="checked: $parent.checked2[0], size: 'large'"></y-switch>
+      <hr class="hr-fix">
+      <y-switch params="checked: $parent.checked2[1]"></y-switch>
+      <hr class="hr-fix">
+      <y-switch params="checked: $parent.checked2[2], size: 'small'"></y-switch>
+    </div>
+    <div class="code-split">
+      <span>尺寸</span>
+    </div>
+    <div class="code-bottom">
+      设置<code>size</code>为<code>large</code>或<code>small</code>使用大号和小号的开关。
+    </div>
+  </demo>
+</div>
+
+<div>
+  <demo params="code:code[2]">
+    <div class="code-top">
+      <y-switch params="checked: $parent.checked3[0]">
+        <span data-bind="text: checked()? '开': '关'"></span>
+      </y-switch>
+      <hr class="hr-fix">
+      <y-switch params="checked: $parent.checked3[1]">
+        <span data-bind="visible: checked">
+          <i class="fa fa-check"></i>
+        </span>
+        <span data-bind="visible: !checked()">
+          <i class="fa fa-times"></i>
+        </span>
+      </y-switch>
+    </div>
+    <div class="code-split">
+      <span>自定义内容</span>
+    </div>
+    <div class="code-bottom">
+      自定义内容，建议如果使用2个汉字，将开关尺寸设置为<code>large</code>。
+    </div>
+  </demo>
+</div>
+
+<div>
+  <demo params="code:code[3]">
+    <div class="code-top">
+      <span><y-switch params="checked: $parent.checked4, disabled: $parent.disabled"></y-switch></span>
+      <hr class="hr-fix">
+      <y-button params="type: 'success', click: $parent.toggle">toggle</y-button>
+    </div>
+    <div class="code-split">
+      <span>不可用</span>
+    </div>
+    <div class="code-bottom">
+      禁用开关。
+    </div>
+  </demo>
+</div>
