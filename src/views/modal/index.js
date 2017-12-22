@@ -2,7 +2,7 @@ import template from './index.html'
 import ko from 'knockout'
 import '@/components'
 function init () {
-  var viewmodel = {
+  let viewmodel = {
     code: [
       `
       <template>
@@ -26,7 +26,7 @@ function init () {
       <template>
         <y-button params="type:'ghost', click:function(){$parent.showModal1($parents)}">显示弹框</y-button>
         <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'普通的Modal对话框',errormsg:'请至少选择一条数据！'">
-          <y-grid params="onModalOkValidate: onModalOkValidate, modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$parentContext.$parent.onRowSelect,isStripe: true,columns: $parentContext.$parent.columns,rows: $parentContext.$parent.rows,lockhead:true, selectedRows: $parentContext.$parent.selectedRows"></y-grid>
+          <y-grid params="onModalOkValidate: onModalOkValidate, modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$parentContext.$parent.onRowSelect,isStripe: true,columns: $parentContext.$parent.columns,rows: $parentContext.$parent.rows,lockhead:true"></y-grid>
         </y-modal>
       </template>
       <script>
@@ -35,7 +35,6 @@ function init () {
           showModal1: (val) => {
             viewmodel.modalVisible1(true)
           },
-          selectedRows: ko.observableArray([]),
           rows: ko.observableArray([
             {id: ko.observable(1), name: ko.observable('李明')},
             {id: ko.observable(2), name: ko.observable('韩梅梅')},
@@ -78,20 +77,19 @@ function init () {
               ]
             }
           ]),
-          onRowSelect: function (row) {}
+          onRowSelect: function (row) { validate() }
         }
         setTimeout(() => {
+          validate()
+        }, 300
+        function validate ()
           let grid = ycloud.$refs['modalgrid']
-          grid.onModalOkValidate(false)
-          viewmodel.selectedRows.subscribe((val) => {
-            // 校验规则
-            if (val.length > 0) {
-              grid.onModalOkValidate(true)
-            } else {
-              grid.onModalOkValidate(false)
-            }
-          })
-        }, 300)
+          if (grid.getSelectedRows().length > 0) {
+            grid.onModalOkValidate(true)
+          } else {
+            grid.onModalOkValidate(false)
+          }
+        }
       </script>
       `
     ],
@@ -105,7 +103,6 @@ function init () {
     showModal1: (val) => {
       viewmodel.modalVisible1(true)
     },
-    selectedRows: ko.observableArray([]),
     rows: ko.observableArray([
       {id: ko.observable(1), name: ko.observable('李明')},
       {id: ko.observable(2), name: ko.observable('韩梅梅')},
@@ -148,21 +145,23 @@ function init () {
         ]
       }
     ]),
-    onRowSelect: function (row) {}
+    onRowSelect: function (row) {
+      validate()
+    }
   }
   // 要是300s渲染不完页面呢.. 300s为了subscribe只能监控变化时，初始化没选择就点确定
   setTimeout(() => {
-    let grid = ycloud.$refs['modalgrid']
-    grid.onModalOkValidate(false)
-    viewmodel.selectedRows.subscribe((val) => {
-      // 校验规则
-      if (val.length > 0) {
-        grid.onModalOkValidate(true)
-      } else {
-        grid.onModalOkValidate(false)
-      }
-    })
+    validate()
   }, 300)
+
+  function validate () {
+    let grid = ycloud.$refs['modalgrid']
+    if (grid.getSelectedRows().length > 0) {
+      grid.onModalOkValidate(true)
+    } else {
+      grid.onModalOkValidate(false)
+    }
+  }
 
   ko.applyBindings(viewmodel, document.getElementById('app'))
 }
