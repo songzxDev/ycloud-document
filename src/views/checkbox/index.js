@@ -41,8 +41,8 @@ function init () {
     checkboxValue: ko.observableArray([]),
     checkboxValue1: ko.observableArray([]),
     checkboxValue2: ko.observableArray([]),
-    checkboxDataList: ko.observableArray([{value: 1, label:'北京'},{value: 2,label:'上海'},{value: 3,label:'广州'}]),
-    checkboxDataList1: ko.observableArray([{value: 1, label:'北京', secondarylabel:'(we are here)'},{value: 2,label:'上海'},{value: 3,label:'广州'}])
+    checkboxDataList: ko.observableArray([{value: 1, label: '北京'}, {value: 2,label: '上海'}, {value: 3,label: '广州'}]),
+    checkboxDataList1: ko.observableArray([{value: 1, label: '北京', secondarylabel: '(we are here)'}, {value: 2, label: '上海'}, {value: 3, label: '广州'}])
   }
 
   ko.applyBindings(viewmodel, document.getElementById('app'))
