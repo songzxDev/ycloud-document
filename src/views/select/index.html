@@ -1,0 +1,94 @@
+<div>
+  <demo params="code:code.base">
+    <div class="code-top">
+      <div class="row">
+        <div class="col-md-5">
+          <y-select params="dataList:$root.selectList,value:$root.singleselect.base,onChange:$root.onSelectChange"></y-select>
+        </div>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>基本用法</span>
+    </div>
+    <div class="code-bottom">
+      基本用法。dataList绑定可选择的数据，value绑定已选择的数据，onChange可绑定自定义事件<br>(当点击item时，已选数据发生变化时触发)。
+    </div>
+  </demo>
+</div>
+
+<div>
+    <demo params="code:code.multiple">
+      <div class="code-top">
+        <div class="row">
+          <div class="col-md-5">
+              <y-select
+              params="dataList:$root.selectList,multiValue:$root.multiselect,multiple:true"></y-select>
+          </div>
+        </div>
+      </div>
+      <div class="code-split">
+        <span>多选</span>
+      </div>
+      <div class="code-bottom">
+        通过设置属性multiple可以开启多选模式。多选模式下，multiValue接受数组类型的数据，所返回的也是数组。
+      </div>
+    </demo>
+  </div>
+
+<div>
+  <demo params="code:code.clearable">
+    <div class="code-top">
+      <div class="row">
+        <div class="col-md-5">
+          <y-select params="dataList:$root.selectList,value:$root.singleselect.clearable,clearable:true"></y-select>
+        </div>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>可清空</span>
+    </div>
+    <div class="code-bottom">
+      通过设置属性clearable可以清空已选项。
+    </div>
+  </demo>
+</div>
+
+<div>
+    <demo params="code:code.filterable">
+      <div class="code-top">
+        <div class="row">
+          <div class="col-md-5">
+              <y-select params="dataList:$root.selectList,value:$root.singleselect.filterable,clearable:true,filterable:true"></y-select>
+          </div>
+        </div>
+      </div>
+      <div class="code-split">
+        <span>可搜索</span>
+      </div>
+      <div class="code-bottom">
+          通过设置属性filterable可以开启搜索模式。仅适用于单选模式。
+      </div>
+    </demo>
+  </div>
+
+
+<div>
+  <demo params="code:code.onmore">
+    <div class="code-top">
+      <div class="row">
+        <div class="col-md-5">
+          <y-select params="valuekey:'id',labelkey: 'personName',hasmore:true, onmore:$root.showModal,value:$root.singleselect.onmore,loadData: $root.loadSelectData,clearable:true,filterable:true"></y-select>
+          <y-modal params="visible: $root.modalVisible, width:'700px',errormsg:'请选择！',title:'请选择！'">
+            自定义内容
+          </y-modal>
+        </div>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>自定义内容</span>
+    </div>
+    <div class="code-bottom">
+      通过设置属性hasmore可以开启更多模式，onmore用于绑定点击更多触发的事件。
+    </div>
+  </demo>
+</div>

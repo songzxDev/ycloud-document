@@ -36,13 +36,13 @@ export default [
     showName: 'pagination<br>分页'
   },
   {
-    name: 'dropdown',
-    icon: 'fa-sort-desc',
-    showName: 'dropdown<br>下拉菜单'
-  },
-  {
     name: 'switch',
     icon: 'fa-eye-slash',
     showName: 'Switch<br>开关'
+  },
+  {
+    name: 'select',
+    icon: 'fa-sort-desc',
+    showName: 'Select<br>选择器'
   }
 ]
