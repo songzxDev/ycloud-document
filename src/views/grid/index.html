@@ -3,13 +3,62 @@
   <h2>代码示例</h2>
   <demo params="code:code">
     <div class="code-top">
-      <y-grid params="isDataTable:true,rows:$parent.rows, columns: $parent.columns"></y-grid>
+      <y-grid params="isDataTable:true,maxheight:'auto',rows:$parent.rows, columns: $parent.columnsBase"></y-grid>
     </div>
     <div class="code-split">
       <span>基础用法</span>
     </div>
     <div class="code-bottom">
-      支持datatable的基础用法
+      <p>
+        <code>isDataTable:true</code>表示rows对应的是DataTable里的rows
+      </p>
+      <p> <code>maxheight:'auto'</code>表示表格高度是根据内容动态扩展，适用于数量较少的表格展示 </p>
+      <p>
+        <code>columns</code>里设置title和filed即可
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code2">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>自定义render</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          type: 'render'
+        </code>表示启用自定义render展示
+      </p>
+      <p>
+        <code>
+          renderFn
+        </code>具体进行render渲染的函数
+      </p>
+      <p>
+          只支持简单html片段组装，不支持复杂ko指令或内嵌组件
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code2">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>序号列 + checkbox列</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          type: 'index'
+        </code>表示显示序号列（需要在columns中占一列）
+      </p>
+      <p>
+        <code>
+          type: 'checkbox'
+        </code>表示显示checkbox列 通常用支持多选的表格
+      </p>
     </div>
   </demo>
 </div>
