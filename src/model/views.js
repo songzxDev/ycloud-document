@@ -47,7 +47,12 @@ export default [
   },
   {
     name: 'radio',
-    icon: 'fa-eercast',
+    icon: 'fa-bullseye',
     showName: 'Radio<br>单选框'
+  },
+  {
+    name: 'checkbox',
+    icon: 'fa-clone',
+    showName: 'Checkbox<br>多选框'
   }
 ]

@@ -120,7 +120,7 @@
       <span>登录链接</span></a>
   </li>
   <!-- ko foreach: {data: componentsList, as: 'row'} -->
-  <li data-bind="css: {'active': $parent.hash().indexOf(row.name) > 0}">
+  <li data-bind="css: {'active': $parent.hash() === ('#' + row.name)}">
     <a data-bind="attr: {href: '#' + row.name}">
       <i class="fa fa-home" data-bind="css: row.icon"></i>
       <span data-bind="html: row.showName"></span></a>
