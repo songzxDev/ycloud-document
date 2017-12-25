@@ -44,5 +44,10 @@ export default [
     name: 'select',
     icon: 'fa-sort-desc',
     showName: 'Select<br>选择器'
+  },
+  {
+    name: 'radio',
+    icon: 'fa-eercast',
+    showName: 'Radio<br>单选框'
   }
 ]

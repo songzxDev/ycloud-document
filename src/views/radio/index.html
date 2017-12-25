@@ -1,0 +1,41 @@
+<div>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-radio params="dataList:$root.radioDataList,value:$root.radioValue"></y-radio>
+    </div>
+    <div class="code-split">
+      <span>基本用法</span>
+    </div>
+    <div class="code-bottom">
+      使用<code>dataList</code>绑定一组互斥的选项组。在组合使用时，Radio使用label来自动判断。
+    </div>
+  </demo>
+</div>
+
+<div>
+  <demo params="code:code[1]">
+    <div class="code-top">
+      <y-radio params="dataList:$root.radioDataList1,value:$root.radioValue1"></y-radio>
+    </div>
+    <div class="code-split">
+      <span>不可用</span>
+    </div>
+    <div class="code-bottom">
+      通过设置<code>disabled</code>属性来禁用单选框。
+    </div>
+  </demo>
+</div>
+
+<div>
+  <demo params="code:code[2]">
+    <div class="code-top">
+      <y-radio params="dataList:$root.radioDataList,value:$root.radioValue2,direction:'vertical'"></y-radio>
+    </div>
+    <div class="code-split">
+      <span>垂直</span>
+    </div>
+    <div class="code-bottom">
+      设置属性<code>direction</code>可以垂直显示。
+    </div>
+  </demo>
+</div>
