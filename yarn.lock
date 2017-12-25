@@ -5926,9 +5926,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-ycloud@^1.2.35:
-  version "1.2.35"
-  resolved "https://registry.npmjs.org/ycloud/-/ycloud-1.2.35.tgz#88691da32a1f8d7b07f347a963c80a460ca9f35b"
+ycloud@^1.2.36:
+  version "1.2.36"
+  resolved "https://registry.npmjs.org/ycloud/-/ycloud-1.2.36.tgz#cfc69b04d35e6a7071ffbd78073d1e86b7c9acda"
   dependencies:
     async-validator "^1.8.1"
     fast-uglifyjs-plugin "^0.3.0"
