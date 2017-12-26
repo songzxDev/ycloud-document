@@ -3,7 +3,8 @@
   <!-- ko template: { nodes: $componentTemplateNodes } --><!-- /ko -->
   </div>
   <div class="demo-split"></div>
-  <div class="demo-code">
+  <div class="demo-code" data-bind="css:{'demo-hideCode':!isShowAll()}">
     <y-code params="code:code"></y-code>
   </div>
+  <div class="demo-toggle" data-bind="click:toggle"><span class="fa" data-bind="css:{'fa-angle-double-down':!isShowAll(),'fa-angle-double-up':isShowAll()}"></span></div>
 </div>
