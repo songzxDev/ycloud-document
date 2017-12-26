@@ -1,0 +1,21 @@
+<div class="y-box" style="height:1000px;">
+  <y-boxsticky params="title:'吸顶菜单'">
+    <div class="col-sm-8 text-center" style="line-height: 32px">
+      <!-- ko foreach: {data: [1,2,3,4], as: 'row'} -->
+        <a data-bind="attr: {href: '#content' + row}, text: '内容' + row" class="sticky-anchor"></a>
+      <!-- /ko -->
+    </div>
+  </y-boxsticky>
+  <!-- ko foreach: {data: [1,2,3,4], as: 'row'} -->
+    <y-boxcontent params="title: '标题' + row" data-bind="attr: {id: 'content' + row}, index: row">
+    </y-boxcontent>
+  <!-- /ko -->
+  <demo params="code:code">
+    <div class="code-split" style="margin-top: 10px;">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      通过<code>title</code>属性设置标题，在y-boxsticky标签中编写自定义内容。
+    </div>
+  </demo>
+</div>

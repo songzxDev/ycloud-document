@@ -59,5 +59,10 @@ export default [
     name: 'tag',
     icon: 'fa-tags',
     showName: 'Tag<br>标签'
+  },
+  {
+    name: 'boxsticky',
+    icon: 'fa-cloud',
+    showName: 'Boxsticky<br>吸顶框'
   }
 ]
