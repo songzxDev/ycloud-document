@@ -4,7 +4,7 @@ import ko from 'knockout'
 import hljs from 'highlightjs'
 import Clipboard from 'clipboard'
 import 'highlightjs/styles/github.css'
-import { debug } from 'util';
+// import { debug } from 'util'
 function Init (params, el) {
   // 只获取高亮的DOM，否则会影响ko指令
   this.$el = el.childNodes[0].childNodes[3]
