@@ -56,6 +56,7 @@
     "webpack-parallel-uglify-plugin": "^1.0.0"
   },
   "dependencies": {
+    "clipboard": "^1.7.1",
     "director": "^1.2.8",
     "highlightjs": "^9.10.0",
     "knockout": "^3.4.2",
