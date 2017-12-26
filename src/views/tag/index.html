@@ -1,0 +1,57 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-tag params="text:'标签一'"></y-tag>
+      <y-tag params="text:'标签二'"></y-tag>
+      <y-tag params="item: $root.item, text:$root.item().name,closeable:true,handleClose:$root.handleClose"></y-tag>
+    </div>
+    <div class="code-split">
+      <span>基础属性</span>
+    </div>
+    <div class="code-bottom">
+      简单的展示，添加属性<code>closeable</code>可以关闭标签。
+      点击关闭标签时，会触发<code>handleClose</code>事件，需自己实现关闭逻辑。
+    </div>
+  </demo>
+
+  <demo params="code:code[1]">
+    <div class="code-top">
+      <y-tag params="text:'标签一'"></y-tag>
+      <y-tag params="text:'标签二', type: 'blank'"></y-tag>
+      <y-tag params="text:'标签三', type: 'ghost'"></y-tag>
+    </div>
+    <div class="code-split">
+      <span>样式类型</span>
+    </div>
+    <div class="code-bottom">
+        通过设置<code>type</code>属性为<code>blank</code>或<code>ghost</code>来选择不同的样式类型。
+    </div>
+  </demo>
+
+  <demo params="code:code[2]">
+    <div class="code-top">
+      <y-tag params="text: '标签一', style: {backgroundColor:'#e6451e'}"></y-tag>
+      <y-tag params="text: '标签二', style: {backgroundColor:'#19be6b'}"></y-tag>
+      <y-tag params="text: '标签三', style: {backgroundColor:'#f90'}"></y-tag>
+    </div>
+    <div class="code-split">
+      <span>自定义样式</span>
+    </div>
+    <div class="code-bottom">
+        通过设置<code>style</code>自定义样式。
+    </div>
+  </demo>
+
+  <demo params="code:code[3]">
+    <div class="code-top">
+      <y-tag params="text: '标签一', type:'blank'"></y-tag>
+      <y-tag params="item: $root.item, text: '标签二', type:'blank', enableActive:true, handleClick: $root.handleClick"></y-tag>
+    </div>
+    <div class="code-split">
+      <span>可选择选择</span>
+    </div>
+    <div class="code-bottom">
+      同时设置属性type为blank、enableActive为true，控制当前选择状态。
+    </div>
+  </demo>
+</div>

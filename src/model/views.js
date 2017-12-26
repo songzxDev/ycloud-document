@@ -54,5 +54,10 @@ export default [
     name: 'checkbox',
     icon: 'fa-clone',
     showName: 'Checkbox<br>多选框'
+  },
+  {
+    name: 'tag',
+    icon: 'fa-tags',
+    showName: 'Tag<br>标签'
   }
 ]
