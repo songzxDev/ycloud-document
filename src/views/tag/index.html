@@ -54,4 +54,32 @@
       同时设置属性type为blank、enableActive为true，控制当前选择状态。
     </div>
   </demo>
+
+  <demo params="code:code[4]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-formitem params="label:'不可选择标签:'">
+          <y-searchtag params="tagList: $root.tagList"></y-searchtag>
+        </y-formitem>
+      </div>
+      <div class="col-md-4">
+        <y-formitem params="label:'可选择标签:'">
+          <y-searchtag params="enableActive:true,tagList: $root.tagList"></y-searchtag>
+        </y-formitem>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>可选择选择</span>
+    </div>
+    <div class="code-bottom">
+      同时设置属性type为blank、enableActive为true，控制当前选择状态。
+    </div>
+  </demo>
 </div>
+<style>
+  @media (min-width: 992px) {
+    .col-md-4 {
+      width: 37%;
+    }
+  }
+</style>
