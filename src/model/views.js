@@ -47,7 +47,7 @@ export default [
   },
   {
     name: 'radio',
-    icon: 'fa-bullseye',
+    icon: 'fa-dot-circle-o',
     showName: 'Radio<br>单选框'
   },
   {
@@ -64,5 +64,10 @@ export default [
     name: 'boxsticky',
     icon: 'fa-cloud',
     showName: 'Boxsticky<br>吸顶框'
+  },
+  {
+    name: 'icon',
+    icon: 'fa-subscript',
+    showName: 'Icon<br>图标'
   }
 ]
