@@ -155,10 +155,41 @@
     </div>
     <div class="code-bottom">
       <p>
-        列属性：
         <code>
           rowspan:{maxCol: 2}
         </code>表示自动合并前两列（依据列的innerText来判断是否应该合并，请事先对row做好排序）
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code8">
+    <div class="code-top">
+      <y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>
+      <y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>Grid实例方法</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          ycloud.$ref['grid1'].
+        </code>
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code9">
+    <div class="code-top">
+      <y-button params="click:$root.handleColumnVisible">将name设置为隐藏</y-button>
+      <y-grid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>Grid实例方法</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          ycloud.$ref['grid1'].
+        </code>
       </p>
     </div>
   </demo>

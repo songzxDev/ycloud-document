@@ -202,8 +202,14 @@ function init () {
         }
       }
     }],
+    handleGetSelectedRow () {
+      console.log(window.ycloud.$refs['grid1'].getSelectedRows())
+    },
     handleChange (pageIndex, pageSize) {
-      ycloud.notice.info('pageIndex:' + pageIndex + ' pageSize：' + pageSize)
+      window.ycloud.notice.info('pageIndex:' + pageIndex + ' pageSize：' + pageSize)
+    },
+    handleColumnVisible () {
+      window.ycloud.$refs['grid2'].setColVisibleByField('name', false)
     },
     columns: [{
       title: 'id',
@@ -393,6 +399,30 @@ function init () {
       <template>
         <y-grid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
       </template>
+    `,
+    code8: `
+      <template>
+        <y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      </template>
+      <script >
+        var viewmodel = {
+          handleGetSelectedRow () {
+            console.log(window.ycloud.$refs['grid1'].getSelectedRows())
+          }
+        }
+      </script>
+    `,
+    code9: `
+      <template>
+        <y-grid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      </template>
+      <script >
+        var viewmodel = {
+          handleColumnVisible () {
+            window.ycloud.$refs['grid2'].setColVisibleByField('name', false)
+          }
+        }
+      </script>
     `,
     code: `
       <template>

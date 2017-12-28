@@ -20,10 +20,10 @@ function init () {
         }
       </script>`,
     handleClick: () => {
-      ycloud.notice.info('基础用法info ')
+      window.ycloud.notice.info('基础用法info ')
     },
     handleErrorClick () {
-      ycloud.notice.error('错误用法error')
+      window.ycloud.notice.error('错误用法error')
     }
   }
 
