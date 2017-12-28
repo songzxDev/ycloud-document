@@ -1,5 +1,7 @@
 <div class="y-box">
   <h1>Grid表格组件</h1>
+  <h2>
+    <a style="color: #2baee9" href="https://github.com/yonyouyc/blog/issues/32" target="_blank">Grid组件API文档</a></h2>
   <h2>代码示例</h2>
   <demo params="code:code">
     <div class="code-top">
@@ -61,4 +63,104 @@
       </p>
     </div>
   </demo>
+  <demo params="code:code3">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsOper"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>表格带操作列</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          type: 'operation'
+        </code>表示是操作列
+      </p>
+      <p>
+        <code>
+          operationList.click [Funciton]
+        </code>点击后事件
+        <code>
+          operationList.visible [Funciton]
+        </code>显示隐藏状态，用于动态显示操作按钮
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code4">
+    <div class="code-top">
+      <y-grid params="onPageChange:$root.handleChange,onSizeChange:$root.handleChange,pagination:true,totalCount:ko.observable(20),maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsBase"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>表格带分页</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          pagination: true
+        </code>表示启用分页
+      </p>
+      <p>
+        <code>
+          totalCount: ko.observable(20)
+        </code>如果需要有分页则必须有值，必须为ko对象
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code5">
+    <div class="code-top">
+      <y-grid params="maxheight:'200px',lockhead:true, isDataTable:true,rows:$parent.morerows, columns: $parent.columnsBase"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>表头锁定</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          lockhead: true
+        </code>表示表头锁定
+      </p>
+      <p>
+        如果需要锁定表头则<code>maxheight</code>不能为 <code>auto</code>,需指定高度(如：'200px')或不指定(默认10行高度)
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code6">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsComp"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>可编辑表格</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        列属性：
+        <code>
+          type: 'component'
+        </code>表示这一列使用自定义组件
+        <code>
+          compFn
+        </code>具体用于渲染的组件用哪个
+      </p>
+      <p>
+        理论上每一列可以用任意的ko自定义组件来渲染
+      </p>
+    </div>
+  </demo>
+  <demo params="code:code7">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>支持rowspan的表格</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        列属性：
+        <code>
+          rowspan:{maxCol: 2}
+        </code>表示自动合并前两列（依据列的innerText来判断是否应该合并，请事先对row做好排序）
+      </p>
+    </div>
+  </demo>
+
 </div>
