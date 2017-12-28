@@ -47,12 +47,27 @@ export default [
   },
   {
     name: 'radio',
-    icon: 'fa-bullseye',
+    icon: 'fa-dot-circle-o',
     showName: 'Radio<br>单选框'
   },
   {
     name: 'checkbox',
     icon: 'fa-clone',
     showName: 'Checkbox<br>多选框'
+  },
+  {
+    name: 'tag',
+    icon: 'fa-tags',
+    showName: 'Tag<br>标签'
+  },
+  {
+    name: 'boxsticky',
+    icon: 'fa-cloud',
+    showName: 'Boxsticky<br>吸顶框'
+  },
+  {
+    name: 'icon',
+    icon: 'fa-subscript',
+    showName: 'Icon<br>图标'
   }
 ]

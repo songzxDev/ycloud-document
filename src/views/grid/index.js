@@ -101,7 +101,7 @@ function init () {
         width: '80'
       }, {
         title: 'id',
-        field: 'id',
+        field: 'id'
       }, {
         title: 'name',
         field: 'name'
