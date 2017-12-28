@@ -74,5 +74,10 @@ export default [
     name: 'input',
     icon: 'fa-pencil-square-o',
     showName: 'Input<br>输入框'
+  },
+  {
+    name: 'notice',
+    icon: 'fa-info-circle',
+    showName: 'notice<br>提示消息'
   }
 ]
