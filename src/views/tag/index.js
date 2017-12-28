@@ -48,8 +48,7 @@ function init () {
         }
       }
     </script>
-    `,
-    `<template>
+    `, `<template>
       <y-formitem params="label:'不可选择标签:'">
         <y-searchtag params="tagList: $root.tagList"></y-searchtag>
       </y-formitem>

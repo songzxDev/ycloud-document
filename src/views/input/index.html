@@ -1,0 +1,68 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-input params="placeholder: '请输入文本..', value: $root.value.base1"></y-input>
+        <hr class="hr-fix">
+        <y-input params="placeholder: '请输入文本..', value: $root.value.base2, class: 'setWidth'"></y-input>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      基本用法，可以使用value实现数据的双向绑定。
+      可以设置class来改变输入框的宽度及其他样式，默认 100%。
+    </div>
+  </demo>
+
+  <demo params="code:code[1]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-input params="placeholder: '请输入文本..', value: $root.value.icon, iconClass:'fa fa-search', onIconClick: $root.onIconClick"></y-input>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>带Icon的输入框</span>
+    </div>
+    <div class="code-bottom">
+      通过iconClass属性添加类(例如fa图标集)可以在输入框右边加一个图标。
+      点击图标，会触发onIconClick事件。
+    </div>
+  </demo>
+
+  <demo params="code:code[2]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-input params="placeholder: '请输入文本..', value: $root.value.disabled, disabled: $root.disabled"></y-input>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>禁用状态</span>
+    </div>
+    <div class="code-bottom">
+      通过添加disabled属性可设置为不可用状态。
+    </div>
+  </demo>
+
+  <demo params="code:code[3]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-input params="placeholder: '请输入文本..', value: $root.value.input, iconClass:'fa fa-search', onIconClick: $root.onIconClick, onInput: $root.onInput, onBlur: $root.onBlur, onFocus: $root.onFocus, onSubmit: $root.onSubmit"></y-input>
+        <hr class="hr-fix">
+        <span data-bind="html: $root.eventText"></span>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>所有事件</span>
+    </div>
+    <div class="code-bottom">
+      点击图标时触发onIconClick事件，输入时触发onInput事件，获得焦点时触发onFocus事件，<br>失去焦点时触发onBlur事件，回车触发onSubmit事件。
+    </div>
+  </demo>
+</div>
+<style>
+  .setWidth {
+    width: 180px;
+  }
+</style>

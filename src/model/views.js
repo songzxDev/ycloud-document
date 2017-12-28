@@ -69,5 +69,10 @@ export default [
     name: 'icon',
     icon: 'fa-subscript',
     showName: 'Icon<br>图标'
+  },
+  {
+    name: 'input',
+    icon: 'fa-pencil-square-o',
+    showName: 'Input<br>输入框'
   }
 ]
