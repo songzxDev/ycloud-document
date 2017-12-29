@@ -1,0 +1,61 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top row">
+      <div class="col-md-7">
+        <y-form params="model: $root.model, labelAlign: 'right'">
+          <y-formitem params="label:'输入框:'">
+            <y-input params="placeholder:'请输入文本', type:'text', value:$parent.model.input"></y-input>
+          </y-formitem>
+          <y-formitem params="label:'选择框:'">
+            <y-select params="dataList: $parent.model.selectList,value: $parent.model.selectValue"></y-select>
+          </y-formitem>
+          <y-formitem params="label:'单选:'">
+            <y-radio params="dataList: $parent.model.radioList,value: $parent.model.radioValue"></y-radio>
+          </y-formitem>
+          <y-formitem params="label:'多选:'">
+            <y-checkbox params="dataList: $parent.model.checkboxList, value: $parent.model.checkboxValue"></y-checkbox>
+          </y-formitem>
+          <y-formitem params="label:'开关:'">
+            <y-switch params="value: $parent.model.switch"></y-switch>
+          </y-formitem>
+          <y-formitem params="label:'提交:'">
+            <y-button params="type: 'info', click: $parent.model.submit">提交</y-button>
+          </y-formitem>
+        </y-form>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>表单控件</span>
+    </div>
+    <div class="code-bottom">
+      在form内，每个表单域由formitem组成。<br>
+      给form设置<code>labelWidth</code>给label设置宽度，给form设置<code>labelAlign</code>为label的对齐方式(默认为<code>right</code>)。<br>
+      给formitem设置<code>label</code>可以显示表单域的标签。
+    </div>
+  </demo>
+
+  <demo params="code:code[1]">
+    <div class="code-top row">
+      <div class="col-md-7">
+        <y-form params="ref: 'validateform', vRules: $root.model.vRules, model: $root.model, labelAlign: 'right'">
+          <y-formitem params="label:'账号:',vMap:validateList,vKey:'name'">
+            <y-input params="placeholder:'请输入用户名', type:'text', value:$parent.model.name"></y-input>
+          </y-formitem>
+          <y-formitem params="label:'密码:',vMap:validateList,vKey:'pwd'">
+            <y-input params="placeholder:'请输入密码', type:'text', value:$parent.model.pwd"></y-input>
+          </y-formitem>
+          <y-formitem>
+            <y-button params="type: 'info', click: $parent.model.login">登录</y-button>
+          </y-formitem>
+        </y-form>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>表单验证</span>
+    </div>
+    <div class="code-bottom">
+      form组件基于async-validator实现的数据验证，给form设置属性<code>vRules</code>，同时给需要验证的formtem设置属性<code>vMap</code>，同时设置<code>vKey</code>指向对应字段即可。
+      完整的验证规则请参照开源项目async-validator。
+    </div>
+  </demo>
+</div>

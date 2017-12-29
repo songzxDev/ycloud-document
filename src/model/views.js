@@ -74,5 +74,10 @@ export default [
     name: 'notice',
     icon: 'fa-info-circle',
     showName: '提示消息'
+  },
+  {
+    name: 'form',
+    icon: 'fa-file-text-o',
+    showName: '表单'
   }
 ]
