@@ -79,5 +79,10 @@ export default [
     name: 'form',
     icon: 'fa-file-text-o',
     showName: '表单'
+  },
+  {
+    name: 'statetabs',
+    icon: 'fa-info-circle',
+    showName: '状态切换'
   }
 ]
