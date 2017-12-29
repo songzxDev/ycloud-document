@@ -1,0 +1,28 @@
+<div class="y-box">
+  <h1>statetabs状态切换组件</h1>
+  <!--<h2>-->
+    <!--<a style="color: #2baee9" href="https://github.com/yonyouyc/blog/issues/32" target="_blank">statetabs组件API文档</a></h2>-->
+  <h2>代码示例</h2>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-state-tabs params="style:{marginBottom: 0},index:$root.curStateIndex,items:$root.stateTabsItems,handler: $root.handleClick"></y-state-tabs>
+    </div>
+    <div class="code-split">
+      <span>基本</span>
+    </div>
+    <div class="code-bottom">
+      一般业务上配合grid使用
+    </div>
+  </demo>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-state-tabs params="hideNum:true,style:{marginBottom: 0},index:$root.curStateIndex,items:$root.stateTabsItems,handler: $root.handleClick"></y-state-tabs>
+    </div>
+    <div class="code-split">
+      <span>隐藏数字</span>
+    </div>
+    <div class="code-bottom">
+      <code>hideNum:true</code>隐藏数字，数据只需title和state即可
+    </div>
+  </demo>
+</div>

@@ -74,5 +74,10 @@ export default [
     name: 'notice',
     icon: 'fa-info-circle',
     showName: '提示消息'
+  },
+  {
+    name: 'statetabs',
+    icon: 'fa-info-circle',
+    showName: '状态切换'
   }
 ]
