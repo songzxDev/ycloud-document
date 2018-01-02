@@ -1,0 +1,32 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top row">
+      <div class="col-md-6">
+        <y-datepicker params='placeholder:"请选择日期", data: $root.datepicker'>
+        </y-datepicker>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>日期选择器</span>
+    </div>
+    <div class="code-bottom">
+      data绑定日期，可以是 JavaScript 的 Date，例如 new Date()，可以是空，也可以是标准的日期格式。<br>
+      可以通过对data显示订阅subscribe自定义事件。
+    </div>
+  </demo>
+
+  <demo params="code:code[1]">
+    <div class="code-top row">
+      <div class="col-md-6">
+        <y-datetimepicker params='placeholder:"请选择时间", data: $root.datetimepicker'>
+        </y-datetimepicker>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>时间选择器</span>
+    </div>
+    <div class="code-bottom">
+      与日期选择器使用相同。
+    </div>
+  </demo>
+</div>

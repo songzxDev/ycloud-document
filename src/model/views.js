@@ -89,5 +89,10 @@ export default [
     name: 'cascader',
     icon: 'fa-ellipsis-h',
     showName: '级联选择'
+  },
+  {
+    name: 'datepicker',
+    icon: 'fa-calendar',
+    showName: '时间选择器'
   }
 ]
