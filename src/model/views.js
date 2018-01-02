@@ -84,5 +84,10 @@ export default [
     name: 'statetabs',
     icon: 'fa-info-circle',
     showName: '状态切换'
+  },
+  {
+    name: 'cascader',
+    icon: 'fa-ellipsis-h',
+    showName: '级联选择'
   }
 ]
