@@ -2,7 +2,7 @@
     <demo params="code:code[0]">
       <div class="code-top">
         <y-button params="type:'ghost', click:$parent.showModal">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible, width:'700px', title:'普通的Modal对话框'">
+        <y-modal params="visible: $parent.modalVisible, width:'700px', title:'普通的Modal对话框', ok: $parent.handleOk">
           <p>我说</p>
           <p>短发短发</p>
           <p>姑娘</p>
@@ -20,7 +20,7 @@
       <div class="code-top">
         <y-button params="type:'ghost', click:function(){$parent.showModal1($parents)}">显示弹框</y-button>
         <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',errormsg:'请至少选择一条数据！'">
-          <y-grid params="onModalOkValidate: onModalOkValidate, modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'10px',ref:'modalgrid',onRowSelect:$parentContext.$parent.onRowSelect,isStripe: true,columns: $parentContext.$parent.columns,rows: $parentContext.$parent.rows,lockhead:true, selectedRows: $parentContext.$parent.selectedRows"></y-grid>
+          <y-grid params="onModalOkValidate: onModalOkValidate,ref:'modalgrid',columns: $root.columns,rows: $root.rows,onRowSelect:$root.onRowSelect,isStripe:true"></y-grid>
         </y-modal>
       </div>
       <div class="code-split">
@@ -28,6 +28,23 @@
       </div>
       <div class="code-bottom">
         将modal的<code>onModalOkValidate</code>传递给下层组件，通过自定义规则阻止模态框的确定事件触发并给出提示。<br>
+      </div>
+    </demo>
+
+    <demo params="code:code[2]">
+      <div class="code-top">
+        <y-button params="type:'ghost', click:$parent.showModal2">显示弹框</y-button>
+        <y-modal params="visible: $parent.modalVisible2, width:'700px',title:'自动适配高度的Modal对话框'">
+          <span>百家姓: </span>
+          <y-grid params="modalBodyModalHeight:bodyMaxHeight,modalBodyExtraHeight:'20px',onRowSelect:$root.onRowSelect,columns: $root.columns,rows: $root.rows2,lockhead:true"></y-grid>
+        </y-modal>
+      </div>
+      <div class="code-split">
+        <span>自动适配高度的Modal对话框</span>
+      </div>
+      <div class="code-bottom">
+        将modal的<code>bodyMaxHeight</code>传递给下层组件的modalBodyModalHeight(目前只适用于grid组件)，使得下层组件的高度自动适配。<br>
+        modalBodyExtraHeight属性，是modal内部除去grid的高度以外还有哪些高度要去除，例如本例的百家姓。
       </div>
     </demo>
   </div>
