@@ -94,5 +94,10 @@ export default [
     name: 'datepicker',
     icon: 'fa-calendar',
     showName: '时间选择器'
+  },
+  {
+    name: 'tooltip',
+    icon: 'fa-commenting-o',
+    showName: '文字提示'
   }
 ]
