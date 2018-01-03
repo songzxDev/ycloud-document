@@ -44,7 +44,8 @@
         .side-menu{
           list-style: none;
           position: fixed;
-          background: #333 none repeat scroll 0 0;
+          /* background: #333 none repeat scroll 0 0; */
+          background: #fff none repeat scroll 0 0;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
           color: rgba(163, 175, 183, 0.9);
           height: calc(100% - 60px);
@@ -55,7 +56,7 @@
           z-index: 1000;
           height: 100% !important;
           margin: 0;
-          padding: 50px 0 0 0;
+          padding: 30px 0 0 0;
           overflow-y: auto;
         }
         .side-menu::-webkit-scrollbar{
@@ -64,15 +65,23 @@
           -webkit-overflow-scrolling: touch;
         }
         .side-menu li{
+          /* border-right: 2px solid transparent; */
           position: relative;
           text-align: center;
           padding: 8px 0;
         }
         .side-menu li:hover{
-          background: #4f4f4f;
+          /* background: #4f4f4f; */
+        }
+        .side-menu li:hover span, .side-menu li:hover i {
+          color: #ed3f14;
         }
         .side-menu li.active {
-          background: #4f4f4f;
+          /* background: #4f4f4f; */
+          /* border-right-color: #ed3f14; */
+        }
+        .side-menu li.active span, .side-menu li.active i {
+          color: #ed3f14;
         }
         .side-menu li i{
           font-size: 20px;
@@ -123,7 +132,8 @@
   <li data-bind="css: {'active': $parent.hash() === ('#' + row.name)}">
     <a data-bind="attr: {href: '#' + row.name}">
       <i class="fa fa-home" data-bind="css: row.icon"></i>
-      <span data-bind="html: row.showName"></span></a>
+      <span data-bind="html: row.showName"></span>
+    </a>
   </li>
   <!-- /ko -->
 </ul>

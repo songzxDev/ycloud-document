@@ -9,8 +9,10 @@ componentsList.forEach((item) => {
 function initPage (page) {
   page(function (item) {
     ko.cleanNode(document.getElementById('bodycontent'))
+    $('#app').hide()
     $('#app').html(item.default.template)
     item.default.init()
+    $('#app').fadeIn()
   })
 }
 
