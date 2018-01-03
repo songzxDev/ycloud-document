@@ -1,19 +1,20 @@
 <div class="y-box">
-    <demo params="code:code[0]">
-      <div class="code-top">
-        <y-box>
-          <y-boxfilter params="title:'boxfilter'"></y-boxfilter>
-          <y-boxcontent params="title: 'boxcontent'">
-            基本布局
-          </y-boxcontent>
-        </y-box>
-      </div>
-      <div class="code-split">
-        <span>基本用法</span>
-      </div>
-      <div class="code-bottom">
-        y-box组件作为最外层容器包裹，y-boxfilter为标题栏，y-boxcontent为内容区(通过添加<code>title</code>设置标题，可添加<code>style</code>设置样式，与knockout语法保持一致)。
-      </div>
+  <y-title params="name: 'Box容器'"></y-title>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-box>
+        <y-boxfilter params="title:'boxfilter'"></y-boxfilter>
+        <y-boxcontent params="title: 'boxcontent'">
+          基本布局
+        </y-boxcontent>
+      </y-box>
+    </div>
+    <div class="code-split">
+      <span>基本用法</span>
+    </div>
+    <div class="code-bottom">
+      y-box组件作为最外层容器包裹，y-boxfilter为标题栏，y-boxcontent为内容区(通过添加<code>title</code>设置标题，可添加<code>style</code>设置样式，与knockout语法保持一致)。
+    </div>
   </demo>
 
   <demo params="code:code[1]">
