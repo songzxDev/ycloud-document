@@ -20,8 +20,8 @@
     <demo params="code:code[1]">
       <div class="code-top">
         <y-button params="type:'ghost', click:function(){$parent.showModal1($parents)}">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',errormsg:'请至少选择一条数据！'">
-          <y-grid params="onModalOkValidate: onModalOkValidate,ref:'modalgrid',columns: $root.columns,rows: $root.rows,onRowSelect:$root.onRowSelect,isStripe:true"></y-grid>
+        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',validateFn:$root.validateFn,errormsg:'请至少选择一条数据！'">
+          <y-grid params="ref:'modalgrid',columns: $root.columns,rows: $root.rows,onRowSelect:$root.onRowSelect,isStripe:true"></y-grid>
         </y-modal>
       </div>
       <div class="code-split">

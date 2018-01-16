@@ -28,8 +28,8 @@ function init () {
       `
       <template>
         <y-button params="type:'ghost', click:function(){$parent.showModal1($parents)}">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',errormsg:'请至少选择一条数据！'">
-          <y-grid params="onModalOkValidate: onModalOkValidate,ref:'modalgrid',onRowSelect:$root.onRowSelect,isStripe:true,columns: $root.columns,rows: $root.rows,selectedRows: $root.selectedRows"></y-grid>
+        <y-modal params="visible: $parent.modalVisible1, width:'700px',title:'添加校验的Modal对话框',validateFn:$root.validateFn,errormsg:'请至少选择一条数据！'">
+          <y-grid params="ref:'modalgrid',columns: $root.columns,rows: $root.rows,onRowSelect:$root.onRowSelect,isStripe:true"></y-grid>
         </y-modal>
       </template>
       <script>
@@ -80,19 +80,16 @@ function init () {
               ]
             }
           ]),
-          onRowSelect: function (row) { validate() }
-        }
-        setTimeout(() => {
-          validate()
-        }, 300
-        function validate ()
-          let grid = ycloud.$refs['modalgrid']
-          if (grid.getSelectedRows().length > 0) {
-            grid.onModalOkValidate(true)
-          } else {
-            grid.onModalOkValidate(false)
+          onRowSelect: function (row) {},
+          validateFn: function () {
+            let grid = window.ycloud.$refs['modalgrid']
+            if (grid.getSelectedRows().length > 0) {
+              return true
+            } else {
+              return false
+            }
           }
-        }
+        } 
       </script>
       `,
       `
@@ -235,27 +232,19 @@ function init () {
         ]
       }
     ]),
-    onRowSelect: function (row) {
-      validate()
+    onRowSelect: function (row) {},
+    validateFn: function () {
+      let grid = window.ycloud.$refs['modalgrid']
+      if (grid.getSelectedRows().length > 0) {
+        return true
+      } else {
+        return false
+      }
     },
     handleOk: function () {
       window.ycloud.notice.info('你点击了确定！')
     }
   }
-  // 要是300s渲染不完页面呢.. 300s为了subscribe只能监控变化时，初始化没选择就点确定
-  setTimeout(() => {
-    validate()
-  }, 300)
-
-  function validate () {
-    let grid = window.ycloud.$refs['modalgrid']
-    if (grid.getSelectedRows().length > 0) {
-      grid.onModalOkValidate(true)
-    } else {
-      grid.onModalOkValidate(false)
-    }
-  }
-
   ko.applyBindings(viewmodel, document.getElementById('app'))
 }
 export default {
