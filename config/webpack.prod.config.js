@@ -50,6 +50,9 @@ config = merge(config, {
       comments: false,
       sourceMap: true
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: ['vendor'],
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
