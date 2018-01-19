@@ -158,6 +158,62 @@
       </p>
     </div>
   </demo>
+  <demo params="code:code10">
+    <div class="code-top">
+    <y-grid params="maxheight:'auto',isTableBorder:true,columns1:$root.columns1, columns2: $root.columns2, rows: $root.complexHeadRows"></y-grid>
+    </div>
+    <div class="code-split">
+    <span>复杂表头</span>
+    </div>
+    <div class="code-bottom">
+    <p>
+      复杂表头需要定义<code>columns1</code>和<code>columns2</code>两个属性（根据现有场景，目前只支持两行的复杂表头，目前只支持ko对象）
+    </p>
+    <p>
+      参照正常table实现的时候的第一行tr和第二行tr 设置对应的colspan和rowspan即可。
+    </p>
+    <p>
+      为保证样式美观 请确保复杂表头和 <code>isTableBorder:true</code> 配合使用
+    </p>
+    </div>
+  </demo>
+  <demo params="code:code11">
+    <div class="code-top">
+      <y-grid params="lockhead:true, maxheight:'220px',isTableBorder:true,columns1:$root.columnsDynamic1, columns2: $root.columnsDynamic2, rows: $root.complexHeadRowsDynamic"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>复杂表头 + 动态列</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        关键属性：<br>
+        1.返回的数据格式参见右侧代码complexHeadRowsDynamic，需要将动态列做为一个数组如：detailList放入row中<br>
+        2.第一行 columns的 <code>title</code>属性可以设置为 <code>codetitle: '第{n}次报价信息'</code>,{n}会自动替换成当前轮次数字 <br>
+        3.扩展重复列需要定义 <code>loop: true</code> <code>uniqueKey: 'xxx'</code>(第一行中col的uniqueKey，需要和第二行中的包含列一一对应)<br>
+        4.<code>looplength: Function () {}</code> 可以根据row中的值动态返回循环的次数（一般情况下等于row下detailList数组的个数）<br>
+        5.具体列展示的值如果在<code>detailList</code>下则请使用<code>renderFn</code>来进行实现，三个参数第三个会返回<code>col</code>，<code>col._childIndex</code>表示对应<code>detailList</code>中的索引
+      </p>
+      <p>
+
+      </p>
+    </div>
+  </demo>
+  <!--<demo params="code:code10">-->
+    <!--<div class="code-top">-->
+      <!--<y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>-->
+      <!--<y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>-->
+    <!--</div>-->
+    <!--<div class="code-split">-->
+      <!--<span>可展开子表</span>-->
+    <!--</div>-->
+    <!--<div class="code-bottom">-->
+      <!--<p>-->
+        <!--<code>-->
+          <!--ycloud.$ref['grid1'].getSelectedRows()-->
+        <!--</code>-->
+      <!--</p>-->
+    <!--</div>-->
+  <!--</demo>-->
   <demo params="code:code8">
     <div class="code-top">
       <y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>
@@ -169,7 +225,7 @@
     <div class="code-bottom">
       <p>
         <code>
-          ycloud.$ref['grid1'].
+          ycloud.$ref['grid1'].getSelectedRows()
         </code>
       </p>
     </div>
@@ -185,7 +241,7 @@
     <div class="code-bottom">
       <p>
         <code>
-          ycloud.$ref['grid1'].
+          ycloud.$ref['grid1'].setColVisibleByField('name', false)
         </code>
       </p>
     </div>

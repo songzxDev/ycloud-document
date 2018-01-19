@@ -211,6 +211,184 @@ function init () {
     handleColumnVisible () {
       window.ycloud.$refs['grid2'].setColVisibleByField('name', false)
     },
+    columns1: ko.observableArray([
+      {
+        title: '供应商名称',
+        field: 'name',
+        rowspan: 2,
+        width: 200
+      }, {
+        title: '报价信息',
+        colspan: 3,
+        align: 'center'
+      }, {
+        title: '供应商联系方式',
+        field: 'cell',
+        width: 100,
+        rowspan: 2
+      }
+    ]),
+    columns2: ko.observableArray([
+      {
+        title: '单价',
+        field: 'price'
+      }, {
+        title: '数量',
+        field: 'num'
+      }, {
+        title: '税率',
+        field: 'tax'
+      }
+    ]),
+    columnsDynamic1: ko.observableArray([
+      {
+        title: '供应商名称',
+        field: 'name',
+        rowspan: 2,
+        width: 200
+      }, {
+        title: '第{n}次报价信息',
+        colspan: 3,
+        loop: true,
+        uniqueKey: 'price',
+        looplength: function (row) {
+          return row.detailList.length
+        },
+        align: 'center'
+      }, {
+        title: '供应商联系方式',
+        field: 'cell',
+        width: 100,
+        rowspan: 2
+      }
+    ]),
+    columnsDynamic2: ko.observableArray([
+      {
+        title: '单价',
+        field: 'price',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].price
+        }
+      }, {
+        title: '数量',
+        field: 'num',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].num
+        }
+      }, {
+        title: '税率',
+        field: 'tax',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].tax
+        }
+      }
+    ]),
+    complexHeadRows: ko.observableArray([
+      {
+        name: '北京供应商',
+        cell: '18182736212',
+        price: 100.00,
+        num: 12,
+        tax: '17%'
+      }, {
+        name: '上海供应商',
+        cell: '18182736212',
+        price: 100.00,
+        num: 12,
+        tax: '17%'
+      }, {
+        name: '天津供应商',
+        cell: '18182736212',
+        price: 115.00,
+        num: 12,
+        tax: '13%'
+      }, {
+        name: '四川供应商',
+        cell: '18182736212',
+        price: 98.00,
+        num: 12,
+        tax: '17%'
+      }
+    ]),
+    complexHeadRowsDynamic: ko.observableArray([
+      {
+        name: '北京供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 112.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '上海供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 112.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '天津供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 98.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 115.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '四川供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 101.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 102.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }
+    ]),
     columns: [{
       title: 'id',
       field: 'id'
@@ -422,6 +600,207 @@ function init () {
             window.ycloud.$refs['grid2'].setColVisibleByField('name', false)
           }
         }
+      </script>
+    `,
+    code10: `
+      <template>
+        <y-grid params="
+          maxheight:'auto',
+          isTableBorder:true,
+          columns1:$root.columns1, 
+          columns2: $root.columns2, 
+          rows: $root.complexHeadRows"></y-grid>
+      </template> 
+      <script>
+        viewmodel = {
+        columns1: ko.observableArray([
+          {
+            title: '供应商名称',
+            field: 'name',
+            rowspan: 2,
+            width: 200
+          }, {
+            title: '报价信息',
+            colspan: 3,
+            align: 'center'
+          }, {
+            title: '供应商联系方式',
+            field: 'cell',
+            width: 100,
+            rowspan: 2
+          }
+        ]),
+        columns2: ko.observableArray([
+          {
+            title: '单价',
+            field: 'price'
+          }, {
+            title: '数量',
+            field: 'num'
+          }, {
+            title: '税率',
+            field: 'tax'
+          }
+        ]),
+        complexHeadRows: ko.observableArray([
+          {
+            name: '北京供应商',
+            cell: '18182736212',
+            price: 100.00,
+            num: 12,
+            taxt: '17%'
+          }, {
+            name: '上海供应商',
+            cell: '18182736212',
+            price: 120.00,
+            num: 12,
+            taxt: '13%'
+          }, {
+            name: '天津供应商',
+            cell: '18182736212',
+            price: 115.00,
+            num: 12,
+            taxt: '13%'
+          }, {
+            name: '四川供应商',
+            cell: '18182736212',
+            price: 98.00,
+            num: 12,
+            taxt: '17%'
+          }
+        ])}
+      </script>
+    `,
+    code11: `
+      <template>
+        <y-grid params="
+        maxheight:'auto',
+        isTableBorder:true,
+        columns1:columnsDynamic1, 
+        columns2: columnsDynamic2, 
+        rows: complexHeadRowsDynamic"></y-grid>
+      </template> 
+      <script>
+        viewmodel = {
+        columnsDynamic1: ko.observableArray([
+      {
+        title: '供应商名称',
+        field: 'name',
+        rowspan: 2,
+        width: 200
+      }, {
+        title: '第{n}次报价信息',
+        colspan: 3,
+        loop: true,
+        uniqueKey: 'price',
+        looplength: function (row) {
+          return row.detailList.length
+        },
+        align: 'center'
+      }, {
+        title: '供应商联系方式',
+        field: 'cell',
+        width: 100,
+        rowspan: 2
+      }
+    ]),
+    columnsDynamic2: ko.observableArray([
+      {
+        title: '单价',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].price
+        }
+      }, {
+        title: '数量',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].num
+        }
+      }, {
+        title: '税率',
+        width: 50,
+        loop: true,
+        type: 'render',
+        uniqueKey: 'price',
+        renderFn: function (row, index, col) {
+          return row.detailList[col._childIndex].tax
+        }
+      }
+    ]),
+        complexHeadRowsDynamic: ko.observableArray([
+      {
+        name: '北京供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 112.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '上海供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 112.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '天津供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 98.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 110.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 115.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }, {
+        name: '四川供应商',
+        cell: '18182736212',
+        detailList: [{
+          price: 100.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 101.00,
+          num: 12,
+          tax: '17%'
+        }, {
+          price: 102.00,
+          num: 12,
+          tax: '17%'
+        }]
+      }
+    ])}
       </script>
     `,
     code: `
