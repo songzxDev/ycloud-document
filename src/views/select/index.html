@@ -33,6 +33,27 @@
     </div>
   </demo>
 
+  <demo params="code:code.default">
+    <div class="code-top">
+      <div class="row">
+        <div class="col-md-5">
+          <y-select params="dataList:$root.selectList,value:$root.singleselect.default"></y-select>
+        </div>
+        <div class="col-md-5">
+          <y-select
+            params="dataList:$root.selectList,multiValue:$root.multiselectDefault,multiple:true">
+          </y-select>
+        </div>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>默认值</span>
+    </div>
+    <div class="code-bottom">
+      单选模式设置属性value初始化默认值(基本格式：例{value: 1, label: '北京'})，<br>多选模式设置属性multiValue初始化默认值(基本格式：例{value: 1, label: '北京'}, {value: 6, label: '北平'})。
+    </div>
+  </demo>
+
   <demo params="code:code.clearable">
     <div class="code-top">
       <div class="row">

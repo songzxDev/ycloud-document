@@ -44,6 +44,31 @@ function init () {
       }
       </script>
       `,
+      default: `
+      <template>
+        <y-select params="dataList:$root.selectList,value:$root.singleselect.default"></y-select>
+        <y-select
+          params="dataList:$root.selectList,multiValue:$root.multiselectDefault,multiple:true">
+        </y-select>
+      </template>
+      <script>
+        var viewmodel = {
+          selectList: ko.observableArray([
+            {value: 1, label: '北京'},
+            {value: 6, label: '北平'},
+            {value: 2, label: '上海'},
+            {value: 3, label: '广州'},
+            {value: 4, label: '杭州'},
+            {value: 5, label: '超过二十个字的参照超过二十个字的参照超过二十个字的参照'}]
+          ),
+          default: ko.observable({value: 1, label: '北京'}),
+          multiselectDefault: ko.observableArray([
+            {value: 1, label: '北京'},
+            {value: 6, label: '北平'}
+          ])
+        }
+      </script>
+      `,
       clearable: `
       <template>
         <y-select params="dataList:$root.selectList,value:$root.clearable,clearable:true"></y-select>
@@ -136,9 +161,14 @@ function init () {
       base: ko.observable(),
       clearable: ko.observable(),
       loadData: ko.observable(),
-      onmore: ko.observable()
+      onmore: ko.observable(),
+      default: ko.observable({value: 1, label: '北京'})
     },
     multiselect: ko.observableArray(),
+    multiselectDefault: ko.observableArray([
+      {value: 1, label: '北京'},
+      {value: 6, label: '北平'}
+    ]),
     onSelectChange: function (data) {
       console.log('change:' + JSON.stringify(data))
     },

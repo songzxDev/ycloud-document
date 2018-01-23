@@ -31,15 +31,18 @@
 
   <demo params="code:code[2]">
     <div class="code-top">
-      <y-tag params="text: '标签一', style: {backgroundColor:'#e6451e'}"></y-tag>
-      <y-tag params="text: '标签二', style: {backgroundColor:'#19be6b'}"></y-tag>
-      <y-tag params="text: '标签三', style: {backgroundColor:'#f90'}"></y-tag>
+      <y-tag params="text: '标签一', color: '#e6451e'"></y-tag>
+      <y-tag params="text: '标签二', color: '#19be6b'"></y-tag>
+      <y-tag params="text: '标签三', color: '#f90'"></y-tag>
+      <y-tag params="text: '标签一', color: '#e6451e', fill: true"></y-tag>
+      <y-tag params="text: '标签二', color: '#19be6b', fill: true"></y-tag>
+      <y-tag params="text: '标签三', color: '#f90', fill: true"></y-tag>
     </div>
     <div class="code-split">
       <span>自定义样式</span>
     </div>
     <div class="code-bottom">
-        通过设置<code>style</code>自定义样式。
+        通过设置<code>color</code>自定义颜色，设置<code>fill</code>填充标签。
     </div>
   </demo>
 
