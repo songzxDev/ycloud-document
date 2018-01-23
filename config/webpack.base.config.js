@@ -79,6 +79,6 @@ module.exports = {
   },
   output: {
     path: distpath,
-    filename: 'libs.[name].js'
+    filename: 'libs.[name].[hash].js'
   },
 };

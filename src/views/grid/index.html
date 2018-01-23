@@ -179,7 +179,7 @@
   </demo>
   <demo params="code:code11">
     <div class="code-top">
-      <y-grid params="lockhead:true, maxheight:'220px',isTableBorder:true,columns1:$root.columnsDynamic1, columns2: $root.columnsDynamic2, rows: $root.complexHeadRowsDynamic"></y-grid>
+      <y-grid params="headHeight:'90px',lockhead:true, maxheight:'220px',isTableBorder:true,columns1:$root.columnsDynamic1, columns2: $root.columnsDynamic2, rows: $root.complexHeadRowsDynamic"></y-grid>
     </div>
     <div class="code-split">
       <span>复杂表头 + 动态列</span>
@@ -191,29 +191,31 @@
         2.第一行 columns的 <code>title</code>属性可以设置为 <code>codetitle: '第{n}次报价信息'</code>,{n}会自动替换成当前轮次数字 <br>
         3.扩展重复列需要定义 <code>loop: true</code> <code>uniqueKey: 'xxx'</code>(第一行中col的uniqueKey，需要和第二行中的包含列一一对应)<br>
         4.<code>looplength: Function () {}</code> 可以根据row中的值动态返回循环的次数（一般情况下等于row下detailList数组的个数）<br>
-        5.具体列展示的值如果在<code>detailList</code>下则请使用<code>renderFn</code>来进行实现，三个参数第三个会返回<code>col</code>，<code>col._childIndex</code>表示对应<code>detailList</code>中的索引
+        5.具体列展示的值如果在<code>detailList</code>下则请使用<code>renderFn</code>来进行实现，三个参数第三个会返回<code>col</code>，<code>col._childIndex</code>表示对应<code>detailList</code>中的索引<br>
+        6.<code>headHeight:'90px'</code> 默认情况下普通表头高度是45px（默认值） 对于复杂表头需要传入自定义的高度
       </p>
       <p>
-
       </p>
     </div>
   </demo>
-  <!--<demo params="code:code10">-->
-    <!--<div class="code-top">-->
-      <!--<y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>-->
-      <!--<y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>-->
-    <!--</div>-->
-    <!--<div class="code-split">-->
-      <!--<span>可展开子表</span>-->
-    <!--</div>-->
-    <!--<div class="code-bottom">-->
-      <!--<p>-->
-        <!--<code>-->
-          <!--ycloud.$ref['grid1'].getSelectedRows()-->
-        <!--</code>-->
-      <!--</p>-->
-    <!--</div>-->
-  <!--</demo>-->
+  <demo params="code:code12">
+    <div class="code-top">
+      <y-grid params="lockcolumn:true, isTableBorder:true,columns:$root.columnsDynamic3,rows: $root.complexHeadRowsDynamic"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>固定列</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        关键属性：<br>
+        1.<code>lockcolumn:true</code>(会同时默认设置lockhead:true) <br>
+        2.定义columns需要指定所有列的宽度 <br>
+        3.定义columns把需要锁定的前N列设置<code>lock:true</code>
+      </p>
+      <p>
+      </p>
+    </div>
+  </demo>
   <demo params="code:code8">
     <div class="code-top">
       <y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>
