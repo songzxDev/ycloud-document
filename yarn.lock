@@ -5907,7 +5907,7 @@ yargs@~3.10.0:
 
 ycloud@^1.4.5:
   version "1.4.5"
-  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-1.4.5.tgz#51a1ba985981db99fef1cb5cc829e9af3903a366"
+  resolved "https://registry.npmjs.org/ycloud/-/ycloud-1.4.5.tgz#51a1ba985981db99fef1cb5cc829e9af3903a366"
   dependencies:
     async-validator "^1.8.1"
     knockout "3.4.2"

@@ -28,9 +28,12 @@ function init () {
     </template>
     `, `
     <template>
-      <y-tag params="text: '标签一', style: {backgroundColor:'#e6451e'}"></y-tag>
-      <y-tag params="text: '标签二', style: {backgroundColor:'#19be6b'}"></y-tag>
-      <y-tag params="text: '标签三', style: {backgroundColor:'#f90'}"></y-tag>
+      <y-tag params="text: '标签一', color: '#e6451e'"></y-tag>
+      <y-tag params="text: '标签二', color: '#19be6b'"></y-tag>
+      <y-tag params="text: '标签三', color: '#f90'"></y-tag>
+      <y-tag params="text: '标签一', color: '#e6451e', fill: true"></y-tag>
+      <y-tag params="text: '标签二', color: '#19be6b', fill: true"></y-tag>
+      <y-tag params="text: '标签三', color: '#f90', fill: true"></y-tag>
     </template>
     `, `
     <template>
