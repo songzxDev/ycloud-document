@@ -23,6 +23,17 @@ function init () {
       `,
       `
       <template>
+        <div class="col-md-4">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'integer',value:ko.observable('')"></y-input>
+          <hr class="hr-fix">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'positiveinteger',value:ko.observable('')"></y-input>
+          <hr class="hr-fix">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'positivenumber',value:ko.observable('')"></y-input>
+        </div>
+      </template>
+      `,
+      `
+      <template>
         <y-input params="placeholder: '请输入文本..', value: $root.value.icon, iconClass:'fa fa-search', onIconClick: $root.onIconClick"></y-input>
       </template>
       <script>

@@ -16,8 +16,30 @@
       可以设置class来改变输入框的宽度及其他样式，默认 100%。
     </div>
   </demo>
-
+  
   <demo params="code:code[1]">
+    <div class="code-top">
+      <y-form params="labelWidth:'100px'">
+        <y-formitem params="label:'整数输入框'">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'integer',value:ko.observable('')"></y-input>
+        </y-formitem>
+        <y-formitem params="label:'正整数输入框'">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'positiveinteger',value:ko.observable('')"></y-input>
+        </y-formitem>
+        <y-formitem params="label:'正数输入框'">
+          <y-input params="placeholder:'请输入文本',class:'y-inline-block',type:'positivenumber',value:ko.observable('')"></y-input>
+        </y-formitem>
+      </y-form>
+    </div>
+    <div class="code-split">
+      <span>输入框类型</span>
+    </div>
+    <div class="code-bottom">
+      除支持input输入框的基本类型，还支持设置<br><code>type</code>为<code>integer</code>(整数)、<code>positiveinteger</code>(正整数)、<code>positivenumber</code>(正数)。
+    </div>
+  </demo>
+
+  <demo params="code:code[2]">
     <div class="code-top row">
       <div class="col-md-4">
         <y-input params="placeholder: '请输入文本..', value: $root.value.icon, iconClass:'fa fa-search', onIconClick: $root.onIconClick"></y-input>
@@ -32,7 +54,7 @@
     </div>
   </demo>
 
-  <demo params="code:code[2]">
+  <demo params="code:code[3]">
     <div class="code-top row">
       <div class="col-md-4">
         <y-input params="placeholder: '请输入文本..', value: $root.value.disabled, disabled: $root.disabled"></y-input>
@@ -46,7 +68,7 @@
     </div>
   </demo>
 
-  <demo params="code:code[3]">
+  <demo params="code:code[4]">
     <div class="code-top row">
       <div class="col-md-4">
         <y-input params="placeholder: '请输入文本..', value: $root.value.input, iconClass:'fa fa-search', onIconClick: $root.onIconClick, onInput: $root.onInput, onBlur: $root.onBlur, onFocus: $root.onFocus, onSubmit: $root.onSubmit"></y-input>
