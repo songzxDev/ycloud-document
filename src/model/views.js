@@ -99,5 +99,10 @@ export default [
     name: 'tooltip',
     icon: 'fa-commenting-o',
     showName: '文字提示'
+  },
+  {
+    name: 'breadcrumb',
+    icon: 'fa-newspaper-o',
+    showName: '面包屑'
   }
 ]

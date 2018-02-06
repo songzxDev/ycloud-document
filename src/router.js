@@ -133,6 +133,12 @@ routesList['/tooltip'] = resolve => {
     resolve(view)
   })
 }
+routesList['/breadcrumb'] = resolve => {
+  require.ensure([], function () {
+    var view = require('./views/breadcrumb/index')
+    resolve(view)
+  })
+}
 function initPage (page) {
   page(function (item) {
     console.log(item)
