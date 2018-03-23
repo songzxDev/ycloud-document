@@ -40,7 +40,7 @@
       </p>
     </div>
   </demo>
-  <demo params="code:code2">
+  <demo params="code:codecheckbox">
     <div class="code-top">
       <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
     </div>
@@ -203,7 +203,7 @@
       <y-grid params="lockcolumn:true, isTableBorder:true,columns:$root.columnsDynamic3,rows: $root.complexHeadRowsDynamic"></y-grid>
     </div>
     <div class="code-split">
-      <span>固定列</span>
+      <span>固定列（左侧+右侧）</span>
     </div>
     <div class="code-bottom">
       <p>
@@ -211,6 +211,7 @@
         1.<code>lockcolumn:true</code>(会同时默认设置lockhead:true) <br>
         2.定义columns需要指定所有列的宽度 <br>
         3.定义columns把需要锁定的前N列设置<code>lock:true</code>
+        4.同时支持<code>lockright:true</code>，请将固定在右侧的列放在columns的末尾
       </p>
       <p>
       </p>

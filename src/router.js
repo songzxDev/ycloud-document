@@ -31,6 +31,12 @@ routesList['/grid'] = resolve => {
     resolve(view)
   })
 }
+routesList['/complexgrid'] = resolve => {
+  require.ensure([], function () {
+    var view = require('./views/complexgrid/index')
+    resolve(view)
+  })
+}
 routesList['/modal'] = resolve => {
   require.ensure([], function () {
     var view = require('./views/modal/index')
@@ -136,6 +142,12 @@ routesList['/tooltip'] = resolve => {
 routesList['/breadcrumb'] = resolve => {
   require.ensure([], function () {
     var view = require('./views/breadcrumb/index')
+    resolve(view)
+  })
+}
+routesList['/showdetail'] = resolve => {
+  require.ensure([], function () {
+    var view = require('./views/showdetail/index')
     resolve(view)
   })
 }

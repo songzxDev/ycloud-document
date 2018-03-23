@@ -16,6 +16,11 @@ export default [
     showName: '表格'
   },
   {
+    name: 'complexgrid',
+    icon: 'fa-table',
+    showName: '复杂表格'
+  },
+  {
     name: 'modal',
     icon: 'fa-comment-o',
     showName: '对话框'
@@ -99,6 +104,11 @@ export default [
     name: 'tooltip',
     icon: 'fa-commenting-o',
     showName: '文字提示'
+  },
+  {
+    name: 'showdetail',
+    icon: 'fa-commenting-o',
+    showName: '超长提示'
   },
   {
     name: 'breadcrumb',

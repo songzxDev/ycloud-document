@@ -441,6 +441,32 @@ function init () {
       title: '总价',
       field: 'total'
     }],
+    codecheckbox: `
+      <template>
+        <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      </template> 
+      <script>
+        var viewmodel = {
+          columnsIndex: [{
+              title: 'id',
+              field: 'id',
+              type: 'checkbox'
+            }, {
+              title: '序号',
+              field: 'id',
+              type: 'index',
+              width: '80'
+            }, {
+              title: 'id',
+              field: 'id'
+            }, {
+              title: 'name',
+              field: 'name'
+            }
+          ]
+        }
+      </script>
+    `,
     code2: `
       <template>
         <y-grid params="isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-grid>

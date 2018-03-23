@@ -1,0 +1,41 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top row">
+      <div class="col-md-12">
+        <y-editgrid params="rows: $root.editgridrows, columns: $root.editgridcolumns"></y-editgrid>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>editgrid</span>
+    </div>
+    <div class="code-bottom">
+      <h4>可编辑表格</h4>
+      <p>1.如果要显示表头，则需要将相应表头设置<code>_show:true</code></p>
+      <p>2.可编辑表格分为summary行和普通编辑行。summary行支持 <code>summaryType:'render'</code>
+        和<code>summaryType:'component'</code>两种模式，和grid列本身的<code>type:render</code>和<code>type:component</code>实现一致
+      </p>
+      <p>3.<code>summaryFn</code>对应渲染函数</p>
+      <p>4.summaryType和summaryFn需要写在columns的第一列</p>
+    </div>
+  </demo>
+
+  <demo params="code:code[1]">
+    <div class="code-top">
+      <y-childgrid params="rows: $root.childgridrows, columns:$root.childgridcolumns"></y-childgrid>
+    </div>
+    <div class="code-split">
+      <span>childgrid</span>
+    </div>
+    <div class="code-bottom">
+      <h4>summary行+一对多主子表表格</h4>
+      <p>1.如果要显示表头，则需要将相应表头设置<code>_show:true</code></p>
+      <p>2.和可编辑表格一样包含summary行。summary行支持 <code>summaryType:'render'</code>
+        和 <code>summaryType:'component'</code>两种模式，和grid列本身的<code>type:render</code>和<code>type:component</code>实现一致
+      </p>
+      <p>3. <code>summaryFn</code>对应渲染函数</p>
+      <p>4.包含 <code>childGridFn</code>方法，用于根据row动态渲染子表，注意需要返回一个component</p>
+      <p>5.childGridFn嵌入的y-grid需要设置 <code>nohead: true</code><code>noborder: true</code><code>maxheight: 'auto'</code></p>
+      <p>6.childGridFn需要写在columns的第一列</p>
+    </div>
+  </demo>
+</div>
