@@ -158,6 +158,21 @@
       </p>
     </div>
   </demo>
+  <demo params="code:codeColumnsIndex">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>支持指定列rowspan的表格</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          rowspan:{columnIndex: [2,3]}
+        </code>表示合并第二列和第三列，（请事先对row做好排序，注意和maxCol的区别，maxCol是类似树形结构从左到右的单元格合并）
+      </p>
+    </div>
+  </demo>
   <demo params="code:code10">
     <div class="code-top">
     <y-grid params="maxheight:'auto',isTableBorder:true,columns1:$root.columns1, columns2: $root.columns2, rows: $root.complexHeadRows"></y-grid>

@@ -61,7 +61,7 @@
     "highlightjs": "^9.10.0",
     "knockout": "^3.4.2",
     "lodash": "^4.17.4",
-    "ycloud": "^1.5.46"
+    "ycloud": "^1.6.1"
   },
   "engines": {
     "node": ">= 4.0.0",

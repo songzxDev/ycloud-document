@@ -625,6 +625,9 @@ function init () {
         }
       </script>
     `,
+    codeColumnsIndex: `
+    <y-grid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+    `,
     code7: `
       <template>
         <y-grid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
