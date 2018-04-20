@@ -22,4 +22,18 @@
       使用 <code>loadData</code>参数，传入获取子节点的函数即可
     </div>
   </demo>
+  <demo params="code:codeCheckbox">
+    <div class="code-top">
+      当前选中的是：<span data-bind="text: JSON.stringify($root.treeSelectedItems())"></span>
+      <y-tree params="selectedId: ko.observableArray[3,4],selectedItem:$root.treeSelectedItems,multiple:true,data:$parent.asyncTreeData, height:'200px', loadData:$parent.loadData"></y-tree>
+    </div>
+    <div class="code-split">
+      <span>带checkbox多选</span>
+    </div>
+    <div class="code-bottom">
+      使用 <code>multiple:true</code>参数，即可显示checkbox <br>
+      传入默认勾选值可使用 <code>selectedId</code> 根据数据的id字段判断选中 <br>
+      <code>selectedItem</code> 可返回选中的项的全部数据内容
+    </div>
+  </demo>
 </div>

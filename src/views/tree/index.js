@@ -37,6 +37,35 @@ function init () {
       };
       </script>
     `,
+    codeCheckbox: `
+    <template>
+        <y-tree params="
+        selectedId: ko.observableArray[3,4],
+        selectedItem:$root.treeSelectedItems,
+        multiple:true,
+        data:$parent.asyncTreeData, 
+        height:'200px', 
+        loadData:$parent.loadData"></y-tree>
+      </template>
+      <script>
+      var viewmodel = {
+        asyncTreeData: ko.observableArray([{id: 1, name: '全部'}]),
+        treeSelectedItems: ko.observableArray(),
+        loadData: function (params, cb) {
+          // 根据实际业务需求查询数据并返回
+          if (params.name !== '没有子节点') {
+            // 模拟异步请求
+            setTimeout(()=> {
+              cb([{id:Math.random(),name:'含有子节点'}, {id:Math.random(),name:'没有子节点'}])
+            }, 500)
+    
+          } else {
+            cb(null)
+          }
+        },
+      }
+      </script>
+    `,
     code2: `
     <template>
         <y-tree params="
@@ -73,6 +102,7 @@ function init () {
       }
     },
     asyncTreeData: ko.observableArray([{id: 1, name: '全部'}]),
+    treeSelectedItems: ko.observableArray(),
     treeData: ko.observable([{
       id: 1,
       name: '北京总公司',
