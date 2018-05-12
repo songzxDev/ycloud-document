@@ -13,7 +13,6 @@ function init () {
               width: '20%',
               title: '品牌产地/材质',
               field: 'product',
-              _show: true,
               summaryType: 'render',
               summaryFn: (row) => {
                 var template = "<div><div>" +
@@ -35,7 +34,6 @@ function init () {
               title: '税率',
               field: 'taxrate',
               align: 'right',
-              _show: true,
               type: 'component',
               compFn: (row) => {
                 return {
@@ -51,7 +49,6 @@ function init () {
               title: '无税单价(元)',
               align: 'right',
               field: 'price',
-              _show: true,
               type: 'component',
               compFn: (row) => {
                 return {
@@ -67,7 +64,6 @@ function init () {
               title: '金额',
               align: 'right',
               field: 'amount',
-              _show: true,
               type: 'component',
               compFn: (row) => {
                 return {
@@ -90,13 +86,11 @@ function init () {
                     data: row.reqDate
                   }
                 }
-              },
-              _show: true
+              }
             }, {
               width: '20%',
               title: '备注',
               field: 'remark',
-              _show: true,
               type: 'component',
               compFn: (row) => {
                 return {
@@ -162,7 +156,6 @@ function init () {
           title: '姓名',
           field: 'name',
           width: '20%',
-          _show: true,
           summaryType: 'render',
           summaryFn: (row) => {
             return '<div>' + row.title + '</div><p>这是一个summaryRow</p>'
@@ -190,12 +183,10 @@ function init () {
           }
         }, {
           title: '年龄',
-          _show: true,
           field: 'age',
           width: '10%'
         }, {
           title: '性别',
-          _show: true,
           field: 'sex',
           width: '30%'
         }],
@@ -281,7 +272,6 @@ function init () {
         width: '20%',
         title: '品牌产地/材质',
         field: 'product',
-        _show: true,
         summaryType: 'render',
         summaryFn: (row) => {
           var template = `<div><div>${row.materialName}</div>
@@ -311,7 +301,6 @@ function init () {
         title: '税率',
         field: 'taxrate',
         align: 'right',
-        _show: true,
         type: 'component',
         compFn: (row) => {
           return {
@@ -327,7 +316,6 @@ function init () {
         title: '无税单价(元)',
         align: 'right',
         field: 'price',
-        _show: true,
         type: 'component',
         compFn: (row) => {
           return {
@@ -343,7 +331,6 @@ function init () {
         title: '金额',
         align: 'right',
         field: 'amount',
-        _show: true,
         type: 'component',
         compFn: (row) => {
           return {
@@ -366,13 +353,11 @@ function init () {
               data: row.reqDate
             }
           }
-        },
-        _show: true
+        }
       }, {
         width: '20%',
         title: '备注',
         field: 'remark',
-        _show: true,
         type: 'component',
         compFn: (row) => {
           return {
@@ -389,7 +374,6 @@ function init () {
       title: '姓名',
       field: 'name',
       width: '20%',
-      _show: true,
       summaryType: 'render',
       summaryFn: (row) => {
         return '<div>' + row.title + '</div><p>这是一个summaryRow</p>'
@@ -417,12 +401,10 @@ function init () {
       }
     }, {
       title: '年龄',
-      _show: true,
       field: 'age',
       width: '10%'
     }, {
       title: '性别',
-      _show: true,
       field: 'sex',
       width: '30%'
     }],

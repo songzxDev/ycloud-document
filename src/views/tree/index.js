@@ -10,7 +10,7 @@ function init () {
         <y-tree params="
         data:treeData, 
         height:'200px',
-        onSelect: handleTreeSelect"></y-tree>
+        onChange: handleTreeSelect"></y-tree>
       </template>
       <script>
       var viewmodel = {
