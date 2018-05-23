@@ -4,7 +4,22 @@ import ycloud from 'ycloud'
 import '@/components'
 function init () {
   var viewmodel = {
-
+    extraEdit: function (vm) {
+      console.log(vm)
+    },
+    codeExtra: `
+      <template>
+        <y-tree params="extraText:'编辑', extraEdit: $root.extraEdit,data:$root.treeData, height:'200px', loadData:$root.loadData"></y-tree>
+      </template>
+      <script >
+      // 其他参数设置参考标准树的实现
+        var vm = {
+          extraEdit: function (vm) {
+            console.log(vm)
+          }
+        }
+      </script>
+    `,
     code: `
       <template>
         <y-tree params="

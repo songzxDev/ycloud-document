@@ -9,7 +9,9 @@ function init () {
       price: '',
       num: '',
       total: '',
-      date: ''
+      date: '',
+      datetime: '',
+      financial: ''
     }
   })
   var morerows = new window.u.DataTable({
@@ -348,6 +350,23 @@ function init () {
         tax: '17%'
       }
     ]),
+    columnsDataType: [{
+      title: '日期',
+      field: 'date',
+      dataType: 'date'
+    }, {
+      title: '日期时间',
+      field: 'datetime',
+      dataType: 'datetime'
+    }, {
+      title: '财务数字',
+      field: 'financial',
+      dataType: 'financial'
+    }, {
+      title: '去0处理',
+      field: 'financial',
+      dataType: 'removeZero'
+    }],
     complexHeadRowsDynamic: ko.observableArray([
       {
         name: '北京供应商',
@@ -441,6 +460,51 @@ function init () {
       title: '总价',
       field: 'total'
     }],
+    codeDataType: `
+      <template>
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-grid>
+      </template>
+      <script >
+       var vm = {
+          columnsDataType: [{
+            title: '日期',
+            field: 'date',
+            dataType: 'date'
+          }, {
+            title: '日期时间',
+            field: 'datetime',
+            dataType: 'datetime'
+          }, {
+            title: '财务数字',
+            field: 'financial',
+            dataType: 'financial'
+          }, {
+            title: '去0处理',
+            field: 'financial',
+            dataType: 'removeZero'
+          }],
+          rows: [{
+            id: 1001,
+            name: '张飞牛肉',
+            price: 23,
+            num: 2,
+            total: 46,
+            date: '2014-02-02',
+            datetime: '2014-02-02 02:02:04',
+            financial: '200000000.0700'
+          }, {
+            id: 1002,
+            name: '李白猪肉',
+            price: 31,
+            num: 2,
+            total: 46,
+            date: '2014-02-02',
+            datetime: 1527055083896,
+            financial: 200200000.020
+          }]
+       }
+      </script>
+    `,
     codecheckbox: `
       <template>
         <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
@@ -1128,13 +1192,19 @@ function init () {
       name: '张飞牛肉',
       price: 23,
       num: 2,
-      total: 46
+      total: 46,
+      date: '2014-02-02',
+      datetime: '2014-02-02 02:02:04',
+      financial: '200000000.0700'
     }, {
       id: 1002,
       name: '李白猪肉',
       price: 31,
       num: 2,
-      total: 46
+      total: 46,
+      date: '2014-02-02',
+      datetime: 1527055083896,
+      financial: 200200000.020
     }])
     viewmodel.rowspanrows([
       {

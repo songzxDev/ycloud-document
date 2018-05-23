@@ -40,6 +40,33 @@
       </p>
     </div>
   </demo>
+  <demo params="code:codeDataType">
+    <div class="code-top">
+      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-grid>
+    </div>
+    <div class="code-split">
+      <span>自定义dataType</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <code>
+          dataType: 'xxxx'
+        </code>表示启用自定义数据格式化类型展示
+      </p>
+      <p>
+        dataType: 'date' // 日期格式 支持 数字、字符串
+      </p>
+      <p>
+        dataType: 'datetime' // 时间格式 支持 数字、字符串
+      </p>
+      <p>
+        dataType: 'removeZero' // 去掉小数位末尾多余的0， 4.00 => 4
+      </p>
+      <p>
+        dataType: 'financial' // 财务数字处理, 1000000 => 1,000,000
+      </p>
+    </div>
+  </demo>
   <demo params="code:codecheckbox">
     <div class="code-top">
       <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>

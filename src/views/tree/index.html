@@ -36,4 +36,17 @@
       <code>selectedItem</code> 可返回选中的项的全部数据内容
     </div>
   </demo>
+  <demo params="code: codeExtra">
+    <div class="code-top">
+      <y-tree params="extraText:'编辑', extraEdit: $root.extraEdit,data:$root.treeData, height:'200px', loadData:$root.loadData"></y-tree>
+    </div>
+    <div class="code-split">
+      <span>鼠标移入可编辑</span>
+    </div>
+    <div class="code-bottom">
+      使用 <code>extraText:'编辑',extraEdit:$root.extraEdit</code>参数<br>
+      传入编辑按钮显示文本，以及点击编辑回调事件，仅当鼠标移入当前及选中当前节点时起作用
+    </div>
+  </demo>
+
 </div>
