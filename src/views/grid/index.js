@@ -462,7 +462,7 @@ function init () {
     }],
     codeDataType: `
       <template>
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-basicgrid>
       </template>
       <script >
        var vm = {
@@ -507,7 +507,7 @@ function init () {
     `,
     codecheckbox: `
       <template>
-        <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+        <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
       </template> 
       <script>
         var viewmodel = {
@@ -533,7 +533,7 @@ function init () {
     `,
     code2: `
       <template>
-        <y-grid params="isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-grid>
+        <y-basicgrid params="isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-basicgrid>
       </template>  
       <script>
         viewmodel = {
@@ -562,7 +562,7 @@ function init () {
     `,
     code3: `
       <template>
-        <y-grid params="isDataTable:true,rows:$parent.rows, columns: $parent.columnsOper"></y-grid>
+        <y-basicgrid params="isDataTable:true,rows:$parent.rows, columns: $parent.columnsOper"></y-basicgrid>
       </template>  
       <script>
         viewmodel = {
@@ -620,7 +620,7 @@ function init () {
     `,
     code4: `
       <template>
-        <y-grid params="onPageChange:handleChange,onSizeChange:handleChange,pagination:true,totalCount:ko.observable(20),maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsBase"></y-grid>
+        <y-basicgrid params="onPageChange:handleChange,onSizeChange:handleChange,pagination:true,totalCount:ko.observable(20),maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsBase"></y-basicgrid>
       </template>  
       <script>
         viewmodel = {
@@ -641,12 +641,12 @@ function init () {
     `,
     code5: `
       <template>
-        <y-grid params="maxheight:'200px',lockhead:true, isDataTable:true,rows:$parent.morerows, columns: $parent.columnsBase"></y-grid>
+        <y-basicgrid params="maxheight:'200px',lockhead:true, isDataTable:true,rows:$parent.morerows, columns: $parent.columnsBase"></y-basicgrid>
       </template>
     `,
     code6: `
       <template>
-        <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsComp"></y-grid>
+        <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsComp"></y-basicgrid>
       </template>  
       <script>
         viewmodel = {
@@ -690,16 +690,16 @@ function init () {
       </script>
     `,
     codeColumnsIndex: `
-    <y-grid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+    <y-basicgrid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-basicgrid>
     `,
     code7: `
       <template>
-        <y-grid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+        <y-basicgrid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-basicgrid>
       </template>
     `,
     code8: `
       <template>
-        <y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+        <y-basicgrid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
       </template>
       <script >
         var viewmodel = {
@@ -711,7 +711,7 @@ function init () {
     `,
     code9: `
       <template>
-        <y-grid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+        <y-basicgrid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
       </template>
       <script >
         var viewmodel = {
@@ -723,12 +723,12 @@ function init () {
     `,
     code10: `
       <template>
-        <y-grid params="
+        <y-basicgrid params="
           maxheight:'auto',
           isTableBorder:true,
           columns1:$root.columns1, 
           columns2: $root.columns2, 
-          rows: $root.complexHeadRows"></y-grid>
+          rows: $root.complexHeadRows"></y-basicgrid>
       </template> 
       <script>
         viewmodel = {
@@ -792,12 +792,12 @@ function init () {
     `,
     code11: `
       <template>
-        <y-grid params="
+        <y-basicgrid params="
         maxheight:'auto',
         isTableBorder:true,
         columns1:columnsDynamic1, 
         columns2: columnsDynamic2, 
-        rows: complexHeadRowsDynamic"></y-grid>
+        rows: complexHeadRowsDynamic"></y-basicgrid>
       </template> 
       <script>
         viewmodel = {
@@ -924,11 +924,11 @@ function init () {
     `,
     code12: `
       <template>
-        <y-grid params="
+        <y-basicgrid params="
         lockcolumn:true, 
         isTableBorder:true,
         columns:$root.columnsDynamic3,
-        rows: $root.complexHeadRowsDynamic"></y-grid>
+        rows: $root.complexHeadRowsDynamic"></y-basicgrid>
       </template> 
       <script>
         viewmodel = {
@@ -1027,11 +1027,11 @@ function init () {
     `,
     code: `
       <template>
-        <y-grid params="
+        <y-basicgrid params="
           isDataTable:true,
           rows: rows, 
           columns: columns">
-        </y-grid>
+        </y-basicgrid>
       </template>
       <script>
       var viewmodel = {

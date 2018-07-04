@@ -2,17 +2,12 @@ import ko from 'knockout'
 import $ from 'jquery'
 // import componentsList from './model/views'
 var routesList = {}
-// componentsList.forEach((item) => {
-//   routesList['/' + item.name] = resolve => require(['./views/' + item.name + '/index'], resolve)
-// })
-// componentsList.forEach((item) => {
-//   routesList['/' + item.name] = resolve => {
-//     require.ensure([], function () {
-//       var view = require('./views/' + item.name + '/index')
-//       resolve(view)
-//     })
-//   }
-// })
+routesList['/'] = resolve => {
+  require.ensure([], function () {
+    var view = require('./views/home/index')
+    resolve(view)
+  })
+}
 routesList['/box'] = resolve => {
   require.ensure([], function () {
     var view = require('./views/box/index')
@@ -34,6 +29,12 @@ routesList['/grid'] = resolve => {
 routesList['/complexgrid'] = resolve => {
   require.ensure([], function () {
     var view = require('./views/complexgrid/index')
+    resolve(view)
+  })
+}
+routesList['/gridadvance'] = resolve => {
+  require.ensure([], function () {
+    var view = require('./views/gridadvance/index')
     resolve(view)
   })
 }
@@ -170,3 +171,6 @@ Object.keys(routesList).forEach(item => {
 })
 var route = window.Router(routes)
 route.init()
+if (window.location.href.indexOf('#') < 0) {
+  window.location.href = '#/'
+}

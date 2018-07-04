@@ -2,7 +2,7 @@
   <y-title params="name: 'Grid表格', link: 'https://github.com/yonyouyc/blog/issues/32'"></y-title>
   <demo params="code:code">
     <div class="code-top">
-      <y-grid params="isDataTable:true,maxheight:'auto',rows:$parent.rows, columns: $parent.columnsBase"></y-grid>
+      <y-basicgrid params="isDataTable:true,maxheight:'auto',rows:$parent.rows, columns: $parent.columnsBase"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>基础用法</span>
@@ -19,7 +19,7 @@
   </demo>
   <demo params="code:code2">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsRender"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>自定义render</span>
@@ -42,7 +42,7 @@
   </demo>
   <demo params="code:codeDataType">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsDataType"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>自定义dataType</span>
@@ -69,7 +69,7 @@
   </demo>
   <demo params="code:codecheckbox">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>序号列 + checkbox列</span>
@@ -89,7 +89,7 @@
   </demo>
   <demo params="code:code3">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsOper"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsOper"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>表格带操作列</span>
@@ -112,7 +112,7 @@
   </demo>
   <demo params="code:code4">
     <div class="code-top">
-      <y-grid params="onPageChange:$root.handleChange,onSizeChange:$root.handleChange,pagination:true,totalCount:ko.observable(20),maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsBase"></y-grid>
+      <y-basicgrid params="onPageChange:$root.handleChange,onSizeChange:$root.handleChange,pagination:true,totalCount:ko.observable(20),maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsBase"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>表格带分页</span>
@@ -132,7 +132,7 @@
   </demo>
   <demo params="code:code5">
     <div class="code-top">
-      <y-grid params="maxheight:'200px',lockhead:true, isDataTable:true,rows:$parent.morerows, columns: $parent.columnsBase"></y-grid>
+      <y-basicgrid params="maxheight:'200px',lockhead:true, isDataTable:true,rows:$parent.morerows, columns: $parent.columnsBase"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>表头锁定</span>
@@ -150,7 +150,7 @@
   </demo>
   <demo params="code:code6">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsComp"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsComp"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>可编辑表格</span>
@@ -172,7 +172,7 @@
   </demo>
   <demo params="code:code7">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isStripe:true,rowspan:{maxCol: 2},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>支持rowspan的表格</span>
@@ -187,7 +187,7 @@
   </demo>
   <demo params="code:codeColumnsIndex">
     <div class="code-top">
-      <y-grid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-grid>
+      <y-basicgrid params="maxheight:'auto',isStripe:true,rowspan:{columnIndex: [1,3]},id:'rowspantable',columns:$root.rowspancol,rows: $root.rowspanrows"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>支持指定列rowspan的表格</span>
@@ -195,14 +195,14 @@
     <div class="code-bottom">
       <p>
         <code>
-          rowspan:{columnIndex: [2,3]}
-        </code>表示合并第二列和第三列，（请事先对row做好排序，注意和maxCol的区别，maxCol是类似树形结构从左到右的单元格合并）
+          rowspan:{columnIndex: [1,3]}
+        </code>表示合并第二列（索引1）和第四列（索引3），（请事先对row做好排序，注意和maxCol的区别，maxCol是类似树形结构从左到右的单元格合并）
       </p>
     </div>
   </demo>
   <demo params="code:code10">
     <div class="code-top">
-    <y-grid params="maxheight:'auto',isTableBorder:true,columns1:$root.columns1, columns2: $root.columns2, rows: $root.complexHeadRows"></y-grid>
+    <y-basicgrid params="maxheight:'auto',isTableBorder:true,columns1:$root.columns1, columns2: $root.columns2, rows: $root.complexHeadRows"></y-basicgrid>
     </div>
     <div class="code-split">
     <span>复杂表头</span>
@@ -221,7 +221,7 @@
   </demo>
   <demo params="code:code11">
     <div class="code-top">
-      <y-grid params="headHeight:'90px',lockhead:true, maxheight:'220px',isTableBorder:true,columns1:$root.columnsDynamic1, columns2: $root.columnsDynamic2, rows: $root.complexHeadRowsDynamic"></y-grid>
+      <y-basicgrid params="headHeight:'90px',lockhead:true, maxheight:'220px',isTableBorder:true,columns1:$root.columnsDynamic1, columns2: $root.columnsDynamic2, rows: $root.complexHeadRowsDynamic"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>复杂表头 + 动态列</span>
@@ -242,7 +242,7 @@
   </demo>
   <demo params="code:code12">
     <div class="code-top">
-      <y-grid params="lockcolumn:true, isTableBorder:true,columns:$root.columnsDynamic3,rows: $root.complexHeadRowsDynamic"></y-grid>
+      <y-basicgrid params="lockcolumn:true, isTableBorder:true,columns:$root.columnsDynamic3,rows: $root.complexHeadRowsDynamic"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>固定列（左侧+右侧）</span>
@@ -252,8 +252,8 @@
         关键属性：<br>
         1.<code>lockcolumn:true</code>(会同时默认设置lockhead:true) <br>
         2.定义columns需要指定所有列的宽度 <br>
-        3.定义columns把需要锁定的前N列设置<code>lock:true</code>
-        4.同时支持<code>lockright:true</code>，请将固定在右侧的列放在columns的末尾
+        3.定义columns把需要锁定的前N列设置<code>lock:true</code><br>
+        4.同时支持<code>lockright:true</code>，请将固定在右侧的列放在columns的末尾(暂无示例)
       </p>
       <p>
       </p>
@@ -262,7 +262,7 @@
   <demo params="code:code8">
     <div class="code-top">
       <y-button params="click:$root.handleGetSelectedRow">获取所有选中的行(参见console.log)</y-button>
-      <y-grid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      <y-basicgrid params="ref: 'grid1',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>Grid实例方法</span>
@@ -278,7 +278,7 @@
   <demo params="code:code9">
     <div class="code-top">
       <y-button params="click:$root.handleColumnVisible">将name设置为隐藏</y-button>
-      <y-grid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-grid>
+      <y-basicgrid params="ref: 'grid2',maxheight:'auto',isDataTable:true,rows:$parent.rows, columns: $parent.columnsIndex"></y-basicgrid>
     </div>
     <div class="code-split">
       <span>Grid实例方法</span>

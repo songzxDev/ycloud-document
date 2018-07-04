@@ -1,0 +1,66 @@
+<div class="y-box">
+  <demo params="code:code[0]">
+    <div class="code-top row">
+      <div class="col-md-12">
+        <y-grid params="maxheight:'265px',rows:$root.caculateRows, columns: $root.caculateMainColumns, caculateColumns: $root.caculateColumns">
+        </y-grid>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>合计行</span>
+    </div>
+    <div class="code-bottom">
+      <p>1.添加参数<code>caculateColumns</code></p>
+      <p>2.注意只有y-grid组件支持，y-basicgrid暂时不支持</p>
+    </div>
+  </demo>
+  <demo params="code:code[1]">
+    <div class="code-top row">
+      <div class="col-md-12">
+        <y-basicgrid params="maxheight:'205px',ref:'loadingGrid',columns:$root.ComputeColumns,rows: $root.ComputeRows"></y-basicgrid>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>单元格多字段合并（含组件）</span>
+    </div>
+    <div class="code-bottom">
+      <p>grid中renderFn只支持简单文本的拼装，当遇到多件级别的封装原本需要额外定义组件，使用component引入，y-grid-merge-td提供了一种简单多组件拼装的方式</p>
+      <p>1.使用<code>y-grid-merge-td</code>组件，params中定义 <code>dataList</code>和<code>row</code>即可</p>
+      <p>2.dataList定义方式和columns一样，参考右侧代码</p>
+    </div>
+  </demo>
+  <demo params="code:code[2]">
+    <div class="code-top row">
+      <div class="col-md-12">
+        <y-basicgrid params="ref:'lazygrid',lockcolumn: true,lockhead:true,handleScroll:$root.lazyScroll,lazy: $root.gridLazy, rows: $root.lazyRows, columns: $root.lazyColumns">
+        </y-basicgrid>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>不定行高+锁定列，百行、千行复杂表格异步滚动加载</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        当表格复杂度提升之后（各种组件组合使用）、百行千行表格渲染速度会变慢、需要进行异步滚动加载。
+        简单数据展示类直接展示即可，只针对复杂 多数据组合 + 多组件组合的表格
+      </p>
+      <p>1.使用<code>y-basicgrid</code>组件，<code>y-grid</code>组件暂不支持</p>
+      <p>
+        2.定义<code>lazy: {lazyStart: ko.observable(0), lazyEnd: ko.observable(50)}</code>
+      </p>
+      <p>
+        3. lazyStart->lazyEnd 表示当前页面需要显示的行索引的开始和截止
+      </p>
+      <p>
+        4. 在业务页面通过监听页面的<code>scroll</code>、或监听表格内部的<code>handleScroll</code>事件，动态修改lazyStart和lazyEnd的值
+        来实现滚动异步加载
+      </p>
+      <p>
+        5.如果没有固定列滚动的时候效果会更好一点，后续优化
+      </p>
+      <p>
+        6.如果确保行高是固定的（td设置了相应样式不会超过指定高度），则scroll中的计算方式可大幅度简化
+      </p>
+    </div>
+  </demo>
+</div>

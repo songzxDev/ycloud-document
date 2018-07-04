@@ -21,6 +21,11 @@ export default [
     showName: '复杂表格'
   },
   {
+    name: 'gridadvance',
+    icon: 'fa-table',
+    showName: '表格进阶 '
+  },
+  {
     name: 'modal',
     icon: 'fa-comment-o',
     showName: '对话框'
