@@ -1,35 +1,97 @@
 <y-box>
-  <y-boxcontent>
-    <h1>1.ycloud是什么</h1>
+  <y-breadcrumb params="data:[{text: 'ycloud'},
+        {text: '介绍'}]"></y-breadcrumb>
+  <y-boxcontent params="title:'ycloud是什么'">
     <p>
       ycloud (俗称why cloud或云采cloud) 是友云采前端团队常年基于企业级应用页面总结出品的一套用于构建用户界面的UI框架/UE规范。
-      我们在基于knockoutjs的基础上，为您提供了一系列丰富可用的组件，方便您进行快速搭建一套企业级管理应用界面。
+      我们在基于knockoutjs的基础上，为您提供了一系列丰富可用的组件，方便您进行快速搭建一套企业级管理应用界面。 <br>
+      支持knockoutjs-3.4.2版本以及knockoutjs-3.5.0-rc版本（默认设置ko.options.createChildContextWithAs = true）
     </p>
-    <h1>2.安装</h1>
-    <h4>CDN 引入</h4>
-    <y-code params="code: $root.code">
-
-    </y-code>
-    <h4>NPM 安装</h4>
-    推荐使用 yarn(或npm) 来安装，享受生态圈和工具带来的便利，更好地和 webpack 配合使用，当然，我们也推荐使用 ES2015。
-    <y-code params="code: $root.codenpm"></y-code>
-
-    <h1>3.快速上手</h1>
-    <h4>使用之前</h4>
-    <p>使用ycloud开发之前，我们假设您已经熟悉了对Knockoutjs的使用，我也建议您对一下文档进行阅读：</p>
-    <ul>
-      <li>
-        <a href="https://github.com/yonyouyc/yuncai-fe-guide/blob/master/tutorial/knockoutjs-guide.pdf" target="_blank">knockout基础知识</a>
-      </li>
-    </ul>
-    <h4>使用推荐工程</h4>
-    <p>我们为您准备好了单页面应用的 <a href="https://github.com/yonyouyc/ycloud-template" target="_blank">脚手架工程</a>，您可以基于它进行您的业务开发，为您省去大量宝贵的时间。</p>
-    <h4>引入ycloud</h4>
-    <y-code params="code: $root.importCode"></y-code>
-    <h5>组件使用规范</h5>
-    ycloud组件一般以 <code>y-</code> 做为前缀，使用 <code>params</code>传递参数，如
-    <y-code params="code: $root.codeDemo"></y-code>
-
+  </y-boxcontent>
+  <div class="row">
+    <div class="col-md-6">
+      <y-boxcontent params="title: '安装',style:{minHeight:'450px'}">
+        <h4>CDN 引入</h4>
+        <y-code params="code: $root.code">
+        </y-code>
+        <h4>NPM 安装</h4>
+        推荐使用 yarn(或npm) 来安装，享受生态圈和工具带来的便利，更好地和 webpack 配合使用，当然，我们也推荐使用 ES2015。
+        <y-code params="code: $root.codenpm"></y-code>
+      </y-boxcontent>
+    </div>
+    <div class="col-md-6">
+      <y-boxcontent params="title:'快速上手',style:{marginLeft:'-20px',minHeight:'450px'}">
+        <h4>使用之前</h4>
+        <p>使用ycloud开发之前，我们假设您已经熟悉了对Knockoutjs的使用，我也建议您对一下文档进行阅读：</p>
+        <ul>
+          <li>
+            <a href="https://github.com/yonyouyc/yuncai-fe-guide/blob/master/tutorial/knockoutjs-guide.pdf" target="_blank">knockout基础知识</a>
+          </li>
+        </ul>
+        <h4>使用推荐工程</h4>
+        <p>我们为您准备好了单页面应用的 <a href="https://github.com/yonyouyc/ycloud-template" target="_blank">脚手架工程</a>，您可以基于它进行您的业务开发，为您省去大量宝贵的时间。</p>
+        <h4>引入ycloud</h4>
+        <y-code params="code: $root.importCode"></y-code>
+        <h5>组件使用规范</h5>
+        ycloud组件一般以 <code>y-</code> 做为前缀，使用 <code>params</code>传递参数，如
+        <y-code params="code: $root.codeDemo"></y-code>
+      </y-boxcontent>
+    </div>
+  </div>
+  <y-boxcontent params="title: '特色组件'" style="font-size: 14px">
+    <div style="text-align: center" >
+    <y-state-tabs params="hideNum:true, style:{marginBottom: 0},index:$root.curStateIndex,items:$root.stateTabsItems,handler: $root.handleClick"></y-state-tabs>
+    </div>
+    <div data-bind="visible: $root.curStateIndex() == 0">
+      <y-boxcontent params="title: '容器标题',style:{minHeight:'300px'}">
+        规范的布局组件，让每个页面的大框架形成统一
+      </y-boxcontent>
+    </div>
+    <div data-bind="visible: $root.curStateIndex() == 1">
+      <y-boxcontent params="title: '',style:{minHeight:'300px'}">
+        鼠标滚动后自动停留在顶部，长表单页面 <br>
+        <a href="#boxsticky" target="_blank">体验吸顶菜单</a>
+      </y-boxcontent>
+    </div>
+    <div data-bind="visible: $root.curStateIndex() == 2">
+      <y-boxcontent params="style:{minHeight:'300px'}">
+        <ul>
+          <li>
+              1.完美支持iuap dataTable
+          </li>
+          <li>
+              2.表格单元格自定义组件渲染
+          </li>
+          <li>
+              3.支持table rowspan
+          </li>
+          <li>
+              4.支持复杂表头及表头colspan
+          </li>
+          <li>
+              5.支持动态列渲染（表格横向纵向二维展开）
+          </li>
+          <li>
+              6.支持特定复杂表格（参见复杂表格菜单）
+          </li>
+          <li>
+              7.其他高级功能，欢迎下载ycloud代码运行后了解
+          </li>
+        </ul>
+      </y-boxcontent>
+    </div>
+    <div data-bind="if: $root.curStateIndex() == 3">
+      <y-boxcontent params="style:{minHeight:'300px'}">
+        <ul>
+          <li>1.依赖基础指令<a target="_blank" href="https://github.com/yonyouyc/ko-bindingHandlers">ko-bindingHandlers</a>，<br>提供丰富的基础应用指令如：
+            clickoutside，hiddeninnewwindow，repeatClick，repeatSubmit，removeZero,amount,financial,financialAmount指令 <br>
+          </li>
+          <li style="width: 250px"><br><y-showdetail params="multiple:true,text:$root.moreText"></y-showdetail><br></li>
+          <li>3.<a target="_blank" href="https://github.com/yonyouyc/ycloud-refer">ycloud-refer</a>:丰富的参照组件，提升客开针对友云采公有云私有云的开发效率<br></li>
+          <li>4.其他稍后补充</li>
+        </ul>
+      </y-boxcontent>
+    </div>
   </y-boxcontent>
 </y-box>
 <style>

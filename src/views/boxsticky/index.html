@@ -5,6 +5,11 @@
         <a data-bind="attr: {href: '#content' + row}, text: '内容' + row" class="sticky-anchor"></a>
       <!-- /ko -->
     </div>
+    <div class="col-sm-2">
+      <div class="pull-right">
+        <y-button params="type:'primary'">保存</y-button>
+      </div>
+    </div>
   </y-boxsticky>
   <!-- ko foreach: {data: [1,2,3,4], as: 'row'} -->
     <y-boxcontent params="title: '标题' + row" data-bind="attr: {id: 'content' + row}, index: row">
