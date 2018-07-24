@@ -14,6 +14,33 @@
       <p>2.注意只有y-grid组件支持，y-basicgrid暂时不支持</p>
     </div>
   </demo>
+  <demo params="code:code[3]">
+    <div class="code-top row">
+      <div class="col-md-12">
+        <y-grid params="
+          crossPageSelectedRows: $root.crossPageRows,
+          onPageChange:$root.handleChange,
+          onSizeChange:$root.handleChange,
+          pagination:true,totalCount:ko.observable(20),
+          maxheight:'auto',
+          rows:$root.pageRows,
+          columns: $root.pageColumns">
+        </y-grid>
+        <div>
+          当前勾选的数据有，
+          <span data-bind="text: JSON.stringify($root.crossPageRows())"></span>
+        </div>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>表格跨页勾选数据</span>
+    </div>
+    <div class="code-bottom">
+      <p>1.添加参数<code>crossPageSelectedRows</code></p>
+      <p>2.参数需要设置为ko.observableArray</p>
+      <p>3.默认数据唯一标识字段为<code>'id'</code>，如果<code>'id'</code>非唯一标识则传入<code>crossPageRowPrimaryKey: 'field'</code>,field代表行唯一的字段名</p>
+    </div>
+  </demo>
   <demo params="code:code[1]">
     <div class="code-top row">
       <div class="col-md-12">

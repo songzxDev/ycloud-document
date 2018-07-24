@@ -60,7 +60,7 @@
     "director": "^1.2.8",
     "highlightjs": "^9.10.0",
     "lodash": "^4.17.4",
-    "ycloud": "^2.2.4"
+    "ycloud": "^2.5.4"
   },
   "engines": {
     "node": ">= 4.0.0",

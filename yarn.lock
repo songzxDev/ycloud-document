@@ -3323,7 +3323,7 @@ knockout-dragdrop@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/knockout-dragdrop/-/knockout-dragdrop-2.6.1.tgz#062408658eeb1b366d5f3deba9afaf04d6d2b52e"
 
-knockout@3.4.2, knockout@^3.4.2:
+knockout@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/knockout/-/knockout-3.4.2.tgz#e87958de77ad1e936f7ce645bab8b5d7c456d937"
 
@@ -3456,6 +3456,10 @@ lodash.uniq@^4.5.0:
 lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+
+lodash@^4.17.10:
+  version "4.17.10"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
 loglevel@^1.4.1:
   version "1.6.0"
@@ -5919,15 +5923,14 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-ycloud@^2.2.4:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.2.4.tgz#08638e2fc80c6d7a35bc402bede9bfe06a576713"
+ycloud@^2.5.4:
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.5.4.tgz#f2a5064828731e60e8badef6e32cf3d64bf3a6a7"
   dependencies:
     async-validator "^1.8.1"
-    knockout "3.4.2"
     knockout-dragdrop "^2.6.1"
     ko-bindinghandler "^1.1.3"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     popper.js "^1.14.1"
     tooltip.js "^1.2.0"
 

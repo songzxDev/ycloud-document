@@ -1,16 +1,30 @@
 <div class="y-box">
-    <y-title params="name: 'Notice提示消息'"></y-title>
-    <demo params="code:code">
-      <div class="code-top">
-        <y-button params="type:'primary', click:$parent.handleClick">info</y-button>
-        <y-button params="type:'error', click:$parent.handleErrorClick">error</y-button>
-      </div>
-      <div class="code-split">
-        <span>基础用法</span>
-      </div>
-      <div class="code-bottom">
-        <code>ycloud.notice.info('基础用法info')</code><br>
-        <code>ycloud.notice.error('错误用法error')</code>
-      </div>
-    </demo>
-  </div>
+  <y-title params="name: '提示和遮罩'"></y-title>
+  <demo params="code:code">
+    <div class="code-top">
+      <y-button params="type:'primary', click:$parent.handleClick">info</y-button>
+      <y-button params="type:'error', click:$parent.handleErrorClick">error</y-button>
+    </div>
+    <div class="code-split">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      <code>ycloud.notice.info('基础用法info')</code><br>
+      <code>ycloud.notice.error('错误用法error')</code>
+    </div>
+  </demo>
+  <demo params="code:code2">
+    <div class="code-top">
+      <y-button params="type:'primary', click:$parent.handleShowMask">显示遮罩</y-button>
+      <y-button params="type:'primary', click:$parent.handleShowTextMask">自定义文本</y-button>
+    </div>
+    <div class="code-split">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      <code>ycloud.loading.show()</code><br>
+      <code>ycloud.loading.show('我们正在加载中。。。')</code><br>
+      <code>ycloud.loading.hide()</code>
+    </div>
+  </demo>
+</div>

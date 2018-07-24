@@ -167,6 +167,24 @@ function init () {
         viewmodel.gridLazy.lazyEnd(index + 30 > datas.length ? datas.length : index + 30)
       }
       </script>
+    `,
+      `
+    <template>
+      <y-grid params="
+          crossPageSelectedRows: $root.crossPageRows,
+          onPageChange:$root.handleChange,
+          onSizeChange:$root.handleChange,
+          pagination:true,totalCount:ko.observable(20),
+          maxheight:'auto',
+          rows:$root.pageRows,
+          columns: $root.pageColumns">
+        </y-grid>
+    </template>
+    <script>
+      var vm = {
+        crossPageRows: ko.observableArray([])
+      }
+    </script>
     `
     ],
     caculateRows: ko.observableArray([
@@ -280,8 +298,59 @@ function init () {
     gridLazy: {
       lazyStart: ko.observable(0),
       lazyEnd: ko.observable(10)
+    },
+    pageRows: ko.observableArray(),
+    pageColumns: [{
+      type: 'checkbox'
+    }, {
+      title: '列1',
+      field: 'field1'
+    }, {
+      title: '列2',
+      field: 'field2'
+    }],
+    crossPageRows: ko.observableArray([]),
+    handleChange (pageIndex, pageSize) {
+      if (pageIndex === 0) {
+        viewmodel.pageRows([{
+          id: 1,
+          field1: 'field1',
+          field2: 'field2'
+        }, {
+          id: 2,
+          field1: 'field11',
+          field2: 'field21'
+        }, {
+          id: 3,
+          field1: 'field12',
+          field2: 'field22'
+        }])
+      } else {
+        viewmodel.pageRows([{
+          id: 4,
+          field1: 'field4',
+          field2: 'field4'
+        }, {
+          id: 5,
+          field1: 'field5',
+          field2: 'field25'
+        }])
+      }
     }
   }
+  viewmodel.pageRows([{
+    id: 1,
+    field1: 'field1',
+    field2: 'field2'
+  }, {
+    id: 2,
+    field1: 'field11',
+    field2: 'field21'
+  }, {
+    id: 3,
+    field1: 'field12',
+    field2: 'field22'
+  }])
   var datas = []
   for (var i = 0; i < 500; i++) {
     datas.push({

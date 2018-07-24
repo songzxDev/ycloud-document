@@ -83,7 +83,7 @@ export default [
   {
     name: 'notice',
     icon: 'fa-info-circle',
-    showName: '提示消息'
+    showName: '提示遮罩'
   },
   {
     name: 'form',
