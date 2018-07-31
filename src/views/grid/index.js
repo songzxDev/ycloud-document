@@ -793,6 +793,8 @@ function init () {
     code11: `
       <template>
         <y-basicgrid params="
+        headHeight:'90px',
+        lockcolumn:true,
         maxheight:'auto',
         isTableBorder:true,
         columns1:columnsDynamic1, 
@@ -806,6 +808,7 @@ function init () {
         title: '供应商名称',
         field: 'name',
         rowspan: 2,
+        lock: true,
         width: 200
       }, {
         title: '第{n}次报价信息',
