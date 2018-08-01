@@ -1,14 +1,14 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe D:\liuxu7\tool\yarn\bin\yarn.js
+  E:\node\node.exe E:\yarn\bin\yarn.js
 
 PATH: 
-  D:\liuxu7\mine\Ruby23-x64\bin;C:\Ruby23-x64\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;D:\liuxu7\tool\yarn\bin;D:\liuxu7\tool\Git\cmd;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Yarn\bin;D:\liuxu7\tool\Sublime Text 3;D:\liuxu7\work\java\jdk\bin;D:\liuxu7\work\java\jdk\jre\bin;;D:\liuxu7\tool\Microsoft VS Code\bin
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;E:\Git\bin;E:\yarn\bin;E:\node\;C:\Users\wjk1993\AppData\Local\Yarn\bin;E:\Microsoft VS Code\bin;C:\Users\wjk1993\AppData\Roaming\npm
 
 Yarn version: 
   0.27.5
 
 Node version: 
-  8.1.3
+  8.11.3
 
 Platform: 
   win32 x64
@@ -75,9 +75,8 @@ npm manifest:
       "clipboard": "^1.7.1",
       "director": "^1.2.8",
       "highlightjs": "^9.10.0",
-      "knockout": "^3.4.2",
       "lodash": "^4.17.4",
-      "ycloud": "^1.3.12"
+      "ycloud": "^2.5.9"
     },
     "engines": {
       "node": ">= 4.0.0",
@@ -3415,7 +3414,11 @@ Lockfile:
     dependencies:
       is-buffer "^1.1.5"
   
-  knockout@3.4.2, knockout@^3.4.2:
+  knockout-dragdrop@^2.6.1:
+    version "2.6.1"
+    resolved "https://registry.yarnpkg.com/knockout-dragdrop/-/knockout-dragdrop-2.6.1.tgz#062408658eeb1b366d5f3deba9afaf04d6d2b52e"
+  
+  knockout@^3.4.2:
     version "3.4.2"
     resolved "https://registry.yarnpkg.com/knockout/-/knockout-3.4.2.tgz#e87958de77ad1e936f7ce645bab8b5d7c456d937"
   
@@ -3548,6 +3551,10 @@ Lockfile:
   lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
     version "4.17.4"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  
+  lodash@^4.17.10:
+    version "4.17.10"
+    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
   
   loglevel@^1.4.1:
     version "1.6.0"
@@ -4203,6 +4210,10 @@ Lockfile:
   pluralize@^1.2.1:
     version "1.2.1"
     resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
+  
+  popper.js@^1.0.2, popper.js@^1.14.1:
+    version "1.14.1"
+    resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.1.tgz#b8815e5cda6f62fc2042e47618649f75866e6753"
   
   portfinder@^1.0.9:
     version "1.0.13"
@@ -5433,6 +5444,12 @@ Lockfile:
     version "1.0.3"
     resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
   
+  tooltip.js@^1.2.0:
+    version "1.2.0"
+    resolved "https://registry.yarnpkg.com/tooltip.js/-/tooltip.js-1.2.0.tgz#8b16482f04397f4f9d7387843dccf186890c8860"
+    dependencies:
+      popper.js "^1.0.2"
+  
   toposort@^1.0.0:
     version "1.0.6"
     resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.6.tgz#c31748e55d210effc00fdcdc7d6e68d7d7bb9cec"
@@ -6001,21 +6018,23 @@ Lockfile:
       decamelize "^1.0.0"
       window-size "0.1.0"
   
-  ycloud@^1.3.12:
-    version "1.3.12"
-    resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-1.3.12.tgz#a565ad7d735c54b266260db6ef25ae8075268840"
+  ycloud@^2.5.4:
+    version "2.5.4"
+    resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.5.4.tgz#f2a5064828731e60e8badef6e32cf3d64bf3a6a7"
     dependencies:
       async-validator "^1.8.1"
-      knockout "3.4.2"
+      knockout-dragdrop "^2.6.1"
       ko-bindinghandler "^1.1.3"
-      lodash "^4.17.4"
+      lodash "^4.17.10"
+      popper.js "^1.14.1"
+      tooltip.js "^1.2.0"
   
   yeast@0.1.2:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: connect ETIMEDOUT 104.16.63.173:443
-      at Object.exports._errnoException (util.js:1022:11)
-      at exports._exceptionWithHostPort (util.js:1045:20)
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:14)
+  Error: connect ETIMEDOUT 104.16.25.35:443
+      at Object._errnoException (util.js:992:11)
+      at _exceptionWithHostPort (util.js:1014:20)
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
