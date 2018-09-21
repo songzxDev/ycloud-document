@@ -1,0 +1,19 @@
+<div class="y-box">
+  <demo params="code:code">
+    <div class="code-top">
+      <hr class="hr-fix">
+      <y-button-group params="click:$parent.dropButton,
+                            dropList:$parent.dropArr,
+                            onDropList:$parent.dropClick">
+        <span class="fa fa-edit"></span>新增
+      </y-button-group>
+    </div>
+    <div class="code-split">
+      <span>基础用法</span>
+    </div>
+    <div class="code-bottom">
+      dropList传入数组，例如[{value: 1, label: 'view Detail'}]。onDropList下拉点击事件
+      click类似事例中新增的点击事件
+    </div>
+  </demo>
+</div>

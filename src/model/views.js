@@ -119,5 +119,10 @@ export default [
     name: 'breadcrumb',
     icon: 'fa-newspaper-o',
     showName: '面包屑'
+  },
+  {
+    name: 'dropbutton',
+    icon: 'fa-commenting-o',
+    showName: '下拉按钮'
   }
 ]
