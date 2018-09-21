@@ -3,7 +3,7 @@
     <demo params="code:code[0]">
       <div class="code-top">
         <y-button params="type:'ghost', click:$parent.showModal">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible, width:'700px', title:'普通的Modal对话框', ok: $parent.handleOk">
+        <y-modal params="stopMaskClick:true,visible: $parent.modalVisible, width:'700px', title:'普通的Modal对话框', ok: $parent.handleOk">
           <p>我说</p>
           <p>短发短发</p>
           <p>姑娘</p>
@@ -14,6 +14,7 @@
       </div>
       <div class="code-bottom">
         最简单的使用方法，通过控制属性visible来显示 / 隐藏对话框。<br>
+        stopMaskClick: true (点击遮罩mask时，不会关闭弹框（默认情况点击下会关闭）)
       </div>
     </demo>
 

@@ -48,5 +48,20 @@
       传入编辑按钮显示文本，以及点击编辑回调事件，仅当鼠标移入当前及选中当前节点时起作用
     </div>
   </demo>
+  <demo params="code: codeNodeOption">
+    <div class="code-top">
+      <y-tree params="multiple: true,nodeOption: $root.nodeOption, data:$root.treeOptionData, height:'200px'"></y-tree>
+    </div>
+    <div class="code-split">
+      <span>节点可配置项checkbox+图标</span>
+    </div>
+    <div class="code-bottom">
+      使用 <code>nodeOption:nodeOption:</code>参数<br>
+      nodeOption: {<br>
+        showCheck (nodeData) // 节点是否显示checkbox的判断函数 <br>
+        nodeIcon (nodeData) // 节点图标样式 根据nodeData内容判断<br>
+      }<br>
+    </div>
+  </demo>
 
 </div>

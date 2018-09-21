@@ -20,6 +20,39 @@ function init () {
         }
       </script>
     `,
+    codeNodeOption: `
+      <template>
+        <div class="code-top">
+          <y-tree params="multiple: true,nodeOption: $root.nodeOption, data:$root.treeOptionData, height:'200px'"></y-tree>
+        </div>      
+      </template>
+      <script>
+        var viewmodel = {
+          showCheck: function (data) {
+            return data.isDepartment
+          },
+          nodeIcon: function (data) {
+            if (data.isDepartment) {
+              return 'fa fa-list'
+            } else {
+              return ''
+            }
+          }
+        }
+      </script>
+    `,
+    nodeOption: {
+      showCheck: function (data) {
+        return data.isDepartment
+      },
+      nodeIcon: function (data) {
+        if (data.isDepartment) {
+          return 'fa fa-list'
+        } else {
+          return ''
+        }
+      }
+    },
     code: `
       <template>
         <y-tree params="
@@ -118,6 +151,29 @@ function init () {
     },
     asyncTreeData: ko.observableArray([{id: 1, name: '全部'}]),
     treeSelectedItems: ko.observableArray(),
+    treeOptionData: ko.observableArray([{
+      id: 1,
+      name: '组织1',
+      isDepartment: false,
+      children: [{
+        id: 2,
+        name: '部门1',
+        isDepartment: true
+      }, {
+        id: 3,
+        name: '组织2',
+        isDepartment: false,
+        children: [{
+          id: 4,
+          name: '部门2',
+          isDepartment: true
+        }, {
+          id: 5,
+          name: '部门3',
+          isDepartment: true
+        }]
+      }]
+    }]),
     treeData: ko.observable([{
       id: 1,
       name: '北京总公司',

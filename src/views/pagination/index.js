@@ -8,7 +8,7 @@ function init () {
     code: `
       <template>
         <y-pagination params="
-          onPageChage: handlePageChange,
+          onPageChange: handlePageChange,
           pageSize: pageSize, 
           totalCount: totalCount, 
           pageIndex: pageIndex">      

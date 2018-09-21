@@ -7,7 +7,7 @@ function init () {
       `
       <template>
         <y-button params="type:'ghost', click:$parent.showModal">显示弹框</y-button>
-        <y-modal params="visible: $parent.modalVisible, width:'700px',title:'普通的Modal对话框',ok: $parent.handleOk">
+        <y-modal params="stopMaskClick:true, visible: $parent.modalVisible, width:'700px',title:'普通的Modal对话框',ok: $parent.handleOk">
           <p>我说</p>
           <p>短发短发</p>
           <p>姑娘</p>

@@ -36,6 +36,7 @@ function init () {
         title: '<div title="第一列">第一列</div>',
         width: '100',
         field: 'field1',
+        lock: true,
         type: 'render',
         renderFn: function (row) {
           let template = `<div>${row.field1}</div>
@@ -58,11 +59,37 @@ function init () {
         align: 'right'
       }, {
         title: '第五列',
-        width: '50%',
-        field: 'field5'
+        width: 300,
+        field: 'field5',
+        type: 'operation',
+        operationList: [
+          {
+            title: '新增',
+            click: function () {},
+            visible: function (row, index, test) {
+              return row.field1 === 'A'
+            }
+          }, {
+            title: '修改',
+            click: function () {},
+            visible: function (row, index, test) {
+              return row.field1 === 'A'
+            }
+          }, {
+            title: '删除',
+            click: function () {}
+          }, {
+            title: '提交',
+            click: function () {}
+          }
+        ]
       }, {
         title: '第六列',
-        width: '50%',
+        width: 100,
+        field: 'field6'
+      }, {
+        title: '第六列',
+        width: 200,
         field: 'field6'
       }
     ],
