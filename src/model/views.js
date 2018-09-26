@@ -124,5 +124,10 @@ export default [
     name: 'dropbutton',
     icon: 'fa-commenting-o',
     showName: '下拉按钮'
+  },
+  {
+    name: 'popdialog',
+    icon: 'fa-commenting-o',
+    showName: '浮动对话框'
   }
 ]

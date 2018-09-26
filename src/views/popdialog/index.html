@@ -1,0 +1,34 @@
+<div class="y-box">
+  <y-title params="name: 'popdialog标签,浮动对话框'"></y-title>
+  <demo params="code:code[0]">
+    <div class="code-top">
+      <y-popdialog params="data:{test: 1}, onOk: $root.popdialogOk,tipText: '<span style=\'color:#ec5f77\' class=\'fa fa-warning\'></span>你们是否要修改此条目,你修改了可能会有麻烦哦！你是不是要考虑一下？',operText: '点击我'" style="margin-left: 100px"></y-popdialog>
+    </div>
+    <div class="code-split">
+      <span>基础属性</span>
+    </div>
+    <div class="code-bottom">
+      <code>data: Object</code>ok事件传递的参数对象 <br>
+      <code>onOk: Function</code>点击确定按钮响应事件 <br>
+      <code>tipText: '你们是否要修改此条目?'</code> 浮动框提示信息,支持html <br>
+      <code>operText: '修改'</code> 默认显示的文案 <br>
+      <code>css: Object</code> 外层节点样式 <br>
+      <code>okTitle: '确定'</code> 确定按钮文案，默认'确定' <br>
+      <code>cancelTitle: '取消'</code> 取消按钮文案，默认'取消' <br>
+    </div>
+  </demo>
+  <demo params="code:code[1]">
+    <div class="code-top">
+      <h4>点击右侧删除按钮查看效果</h4>
+      <y-basicgrid params="maxheight: 'auto',rows: $root.rows, columns: $root.columns"></y-basicgrid>
+    </div>
+    <div class="code-split">
+      <span>配合grid使用</span>
+    </div>
+    <div class="code-bottom">
+      主要看columns中operationList里删除的配置 <br>
+      <code>type:'popdialog'</code> <br>
+      <code>tipText:'xxxx'</code>
+    </div>
+  </demo>
+</div>

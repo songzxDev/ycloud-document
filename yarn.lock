@@ -5923,9 +5923,9 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-ycloud@^2.6.4:
-  version "2.6.4"
-  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.6.4.tgz#5a287a788f9165b65450eb62a921a7d4cbf64ce9"
+ycloud@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.7.0.tgz#91fab7ff9acacd10a2a530ecc63c161dceb20e83"
   dependencies:
     async-validator "^1.8.1"
     knockout-dragdrop "^2.6.1"
