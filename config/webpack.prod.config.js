@@ -30,6 +30,7 @@ config = merge(config, {
     publicPath: "./",
     libraryTarget: 'umd'
   },
+  devtool: 'cheap-module-source-map',
   plugins: [
     new CleanWebpackPlugin(['./dist'],
       {
