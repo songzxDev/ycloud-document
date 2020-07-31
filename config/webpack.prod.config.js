@@ -35,7 +35,7 @@ config = merge(config, {
   output: {
     publicPath: "./",
     libraryTarget: 'umd',
-    publicPath: 'https://ncc-yc-ycloud.oss-cn-beijing.aliyuncs.com/'
+    publicPath: 'http://ycloud.windknow.cc/'
   },
   devtool: 'cheap-module-source-map',
   plugins: [
