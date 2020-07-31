@@ -24,11 +24,18 @@ config = merge(config, {
       commonjs: 'jquery',
       commonjs2: 'jquery',
       amd: 'jquery'
+    },
+    lodash: {
+      root: '_',
+      commonjs: '_',
+      commonjs2: '_',
+      amd: '_'
     }
   },
   output: {
     publicPath: "./",
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    publicPath: 'https://ncc-yc-ycloud.oss-cn-beijing.aliyuncs.com/'
   },
   devtool: 'cheap-module-source-map',
   plugins: [
@@ -64,8 +71,8 @@ config = merge(config, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html'
-    })
-    // new BundleAnalyzerPlugin()
+    }),
+    new BundleAnalyzerPlugin()
   ]
 })
 module.exports = config
