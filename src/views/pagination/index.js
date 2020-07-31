@@ -9,6 +9,7 @@ function init () {
       <template>
         <y-pagination params="
           onPageChange: handlePageChange,
+          onSizeChange: handlePageChange,
           pageSize: pageSize, 
           totalCount: totalCount, 
           pageIndex: pageIndex">      
@@ -29,6 +30,7 @@ function init () {
     pageSize: ko.observable(10),
     pageIndex: ko.observable(0),
     handlePageChange (pageIndex, pageSize) {
+      debugger
       ycloud.notice.info('pageIndex:' + pageIndex + ',pageSize:' + pageSize)
     }
   }

@@ -87,6 +87,20 @@ function init () {
           }
         }
       </script>
+      `,
+      `<template>
+        <div class="col-md-4">
+          <y-input params="required:true, placeholder: '请输入文本..', value: $root.value.base1"></y-input>
+        </div>
+      </template>
+      <script>
+        var viewmodel = {
+          value: {
+            base1: ko.observable(),
+            base2: ko.observable()
+          }
+        }
+      </script>
       `
     ],
     value: {

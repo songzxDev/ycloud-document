@@ -1,6 +1,6 @@
 {
   "name": "ycloud-document",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/libs.js",
   "author": "windknow <songhlc@yonyou.com>",

@@ -83,6 +83,20 @@
       点击图标时触发onIconClick事件，输入时触发onInput事件，获得焦点时触发onFocus事件，<br>失去焦点时触发onBlur事件，回车触发onSubmit事件。
     </div>
   </demo>
+  <demo params="code:code[5]">
+    <div class="code-top row">
+      <div class="col-md-4">
+        <y-input params="required: true, placeholder: '请输入文本..', value: $root.value.input, iconClass:'fa fa-search', onIconClick: $root.onIconClick, onInput: $root.onInput, onBlur: $root.onBlur, onFocus: $root.onFocus, onSubmit: $root.onSubmit"></y-input>
+      </div>
+    </div>
+    <div class="code-split">
+      <span>必填样式</span>
+    </div>
+    <div class="code-bottom">
+      输入框必填样式，有值后会恢复为正常样式.
+      2.10.16开始required支持ko对象，可以动态设置必填样式
+    </div>
+  </demo>
 </div>
 <style>
   .setWidth {
