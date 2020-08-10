@@ -3327,9 +3327,10 @@ knockout@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/knockout/-/knockout-3.4.2.tgz#e87958de77ad1e936f7ce645bab8b5d7c456d937"
 
-ko-bindinghandler@^1.1.3:
-  version "1.1.4"
-  resolved "https://registry.npmjs.org/ko-bindinghandler/-/ko-bindinghandler-1.1.4.tgz#a26aa7b562d83d254d1865999b8c74e9c12923c3"
+ko-bindinghandler@^1.1.10:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/ko-bindinghandler/-/ko-bindinghandler-1.1.12.tgz#ebf7fa0390aaa65b972b9546440d191683a102b5"
+  integrity sha512-fbVFePCO++KepiZv+ckmqJniwDZYDdr19HSYhDB7Xtdvnpbak3Rtt2UCiv8DZ0BAnUeZfTrCdSCVQ/1rh1GeLw==
   dependencies:
     knockout "^3.4.2"
     lodash "^4.17.4"
@@ -5923,13 +5924,14 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-ycloud@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.7.0.tgz#91fab7ff9acacd10a2a530ecc63c161dceb20e83"
+ycloud@^2.10.17:
+  version "2.10.17"
+  resolved "https://registry.yarnpkg.com/ycloud/-/ycloud-2.10.17.tgz#cf4fde53515f73ad693e36715a9d27d7289cd548"
+  integrity sha512-ATKiwXOnsDA065q+lgYm+bhelzVg4urxImkp42giCkHG9XQ8OUnbbYf9j8Ohaio0GbUf9AVPmr+SpRs80LDV5Q==
   dependencies:
     async-validator "^1.8.1"
     knockout-dragdrop "^2.6.1"
-    ko-bindinghandler "^1.1.3"
+    ko-bindinghandler "^1.1.10"
     lodash "^4.17.10"
     popper.js "^1.14.1"
     tooltip.js "^1.2.0"

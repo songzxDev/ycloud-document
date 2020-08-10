@@ -30,7 +30,29 @@ function init () {
     let total = price * num
     obj.rowObj.ref('total')(total)
   })
+  var i = 0
   var viewmodel = {
+    resetColSort: function () {
+      i++
+      if (i % 2) {
+        window.ycloud.$refs['gridSort'].resetColumnSortIndex({name: 2, age: 1})
+      } else {
+        window.ycloud.$refs['gridSort'].resetColumnSortIndex({name: 1, age: 2})
+      }
+    },
+    sortColumns: ko.observableArray([{
+      field: 'name',
+      title: '姓名',
+      sortIndex: 1
+    }, {
+      field: 'age',
+      title: '年龄',
+      sortIndex: 2
+    }]),
+    sortRows: ko.observableArray([{
+      name: '李建国',
+      age: 20
+    }]),
     rowspancol: [
       {
         title: '<div title="第一列">第一列</div>',
@@ -816,6 +838,37 @@ function init () {
           }
         ])}
       </script>
+    `,
+    code13: `
+        <template>
+          <y-basicgrid params="
+          ref: 'sortGrid',
+          maxheight:'auto',
+          columns:columns,  
+          rows: rows"></y-basicgrid>
+        </template>
+        <script>
+          var viewModel = {
+            // 必须设置为observableArray
+            columns: ko.observableArray([{
+              field: 'name',
+              title: '姓名',
+              sortIndex: 1
+            }, {
+              field: 'age',
+              title: '年龄',
+              sortIndex: 2
+            }]),
+            rows: ko.observableArray([{age: 1, name: '李建国'}])
+          }
+          // 
+          setTimeout(function () {
+            ycloud.$refs['sortGrid'].resetColumnSortIndex({
+              name: 2,
+              age: 1
+            })
+          })
+        </script>
     `,
     code11: `
       <template>

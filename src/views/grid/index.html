@@ -291,5 +291,27 @@
       </p>
     </div>
   </demo>
+  <demo params="code:code13">
+    <div class="code-top">
+      <y-button params="click:$root.resetColSort">设置columns列的顺序</y-button>
+      <y-basicgrid params="ref: 'gridSort',maxheight:'auto',rows:$parent.sortRows, columns: $parent.sortColumns"></y-basicgrid>
+    </div>
+    <div class="code-split">
+      <span>Grid实例方法</span>
+    </div>
+    <div class="code-bottom">
+      <p>
+        <b>新特性</b> 2.10.17版本开始生效 <br>
+        1.columns需要设置为ko.observableArray<br>
+        2.columns中可以设置sortIndex，默认会根据sortIndex进行排序，不设置sortInde的列会顺序放在后面<br>
+        3.通过ycloud.$ref['gridSort'].resetColumnSortIndex 可以指定field 设置sortIndex，key为列对应的field
+      </p>
+      <p>
+        <code>
+          ycloud.$ref['gridSort'].resetColumnSortIndex({name: 1, value: 3})
+        </code>
+      </p>
+    </div>
+  </demo>
 
 </div>

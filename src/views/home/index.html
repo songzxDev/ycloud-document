@@ -38,6 +38,13 @@
       </y-boxcontent>
     </div>
   </div>
+  <y-boxcontent params="title:'更新说明'">
+    <ul>
+      <li>2.10.17: columns支持sortIndex属性，grid实例支持resetColumnSortIndex。用于设置表格列的顺序。</li>
+      <li>2.10.16: 1.button loading:true时 不应该触发对应的click事件  2.input required参数支持ko对象</li>
+      <li>2.10.14: 1.添加timerpicker组件，用于选择时间</li>
+    </ul>
+  </y-boxcontent>
   <y-boxcontent params="title: '特色组件'" style="font-size: 14px">
     <div style="text-align: center" >
     <y-state-tabs params="hideNum:true, style:{marginBottom: 0},index:$root.curStateIndex,items:$root.stateTabsItems,handler: $root.handleClick"></y-state-tabs>
